@@ -1,7 +1,7 @@
 # Author: David Holmqvist <daae19@student.bth.se>
 
 CXX=g++
-CXXFLAGS=-std=c++17 -g -Wunused -Wall -Wunused -pg
+CXXFLAGS=-std=c++17 -g -Wunused -Wall -Wunused -O3
 
 all: blur
 
