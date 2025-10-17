@@ -1,0 +1,39 @@
+========== Measuring size=128 ==========
+Data: data/128.data -> output/output_128.txt
+
+Callgrind top candidate functions (heuristic):
+    162,421,961 (100.0%)  PROGRAM TOTALS
+    39,079,424 (24.06%)  /home/zxn1225/Desktop/performance_opti/pearson/analysis.cpp:Analysis::pearson(Vector const&, Vector const&) [/home/zxn1225/Desktop/performance_opti/pearson_op1/pearson]
+    33,714,944 (20.76%)  /home/zxn1225/Desktop/performance_opti/pearson/vector.cpp:Vector::mean() const [/home/zxn1225/Desktop/performance_opti/pearson_op1/pearson]
+    27,049,984 (16.65%)  /home/zxn1225/Desktop/performance_opti/pearson/vector.cpp:Vector::operator[](unsigned int) const [/home/zxn1225/Desktop/performance_opti/pearson_op1/pearson]
+     9,526,832 ( 5.87%)  ./stdio-common/./stdio-common/printf_fp.c:__printf_fp_buffer_1.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+     6,992,944 ( 4.31%)  ./stdlib/./stdlib/strtod_l.c:____strtod_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+     5,422,352 ( 3.34%)  ???:std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_float(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, std::string&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+     3,530,679 ( 2.17%)  ./stdlib/../sysdeps/x86_64/mul_1.S:__mpn_mul_1 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+     1,719,936 ( 1.06%)  ???:std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::do_get(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, double&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+     1,584,960 ( 0.98%)  ./stdio-common/./stdio-common/vfprintf-internal.c:__printf_buffer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+Massif peak heap (bytes): 438272
+Massif peak heap (KB): 428
+
+  parsed run 1: Wall=0.090888 User=0.020000 Sys=0.010000 AvgCPU=100.000000% MaxCPU=100.000000% MaxRSS=4060KB
+  parsed run 2: Wall=0.096560 User=0.000000 Sys=0.000000 AvgCPU=100.000000% MaxCPU=100.000000% MaxRSS=4024KB
+  parsed run 3: Wall=0.101465 User=0.010000 Sys=0.010000 AvgCPU=100.000000% MaxCPU=100.000000% MaxRSS=4060KB
+  parsed run 4: Wall=0.104120 User=0.020000 Sys=0.010000 AvgCPU=100.000000% MaxCPU=100.000000% MaxRSS=4060KB
+  parsed run 5: Wall=0.094353 User=0.010000 Sys=0.010000 AvgCPU=0.000000% MaxCPU=0.000000% MaxRSS=4056KB
+===== Final summary for size=128 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 0.097477
+  Avg_User_seconds: 0.012000
+  Avg_Sys_seconds: 0.008000
+Memory (massif & sampled):
+  Massif_peak_heap_bytes: 438272
+  Massif_peak_heap_kB: 428
+  Avg_MaxRSS_kB (sampled): 4052
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 80.000000%
+  Max_CPU_percent_observed_from_sampling: 100%
+
+Callgrind outputs: Performance/callgrind.128.out, Performance/callgrind.128.annotate.txt
+Massif outputs: Performance/massif.128.out, Performance/massif.128.txt
+Native per-run logs are visible in Performance/
