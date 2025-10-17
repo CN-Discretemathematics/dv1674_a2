@@ -1,0 +1,6 @@
+==53043== Massif, a heap profiler
+==53043== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==53043== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==53043== Command: ./pearson data/256.data output/output_256.txt
+==53043== 
+==53043== 

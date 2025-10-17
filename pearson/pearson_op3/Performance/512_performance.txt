@@ -1,0 +1,39 @@
+========== Measuring size=512 ==========
+Data: data/512.data -> output/output_512.txt
+
+Callgrind top candidate functions (heuristic):
+    3,153,344,345 (100.0%)  PROGRAM TOTALS
+    2,492,829,696 (79.05%)  analysis.cpp:Analysis::pearson(Vector const&, Vector const&) [/home/zxn1225/Desktop/performance_opti/pearson_op3/pearson]
+      155,504,501 ( 4.93%)  ./stdio-common/./stdio-common/printf_fp.c:__printf_fp_buffer_1.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+      113,449,205 ( 3.60%)  ./stdlib/./stdlib/strtod_l.c:____strtod_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       56,820,957 ( 1.80%)  ./stdlib/../sysdeps/x86_64/mul_1.S:__mpn_mul_1 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       25,509,120 ( 0.81%)  ./stdio-common/./stdio-common/vfprintf-internal.c:__printf_buffer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       21,161,897 ( 0.67%)  ./stdlib/./stdlib/strtod_l.c:str_to_mpn.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       19,229,952 ( 0.61%)  ???:std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+       16,211,976 ( 0.51%)  ./stdlib/./stdlib/mul.c:__mpn_mul [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       12,719,183 ( 0.40%)  ./stdlib/./stdlib/strtod_l.c:round_and_return [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+Massif peak heap (bytes): 4282862
+Massif peak heap (KB): 4183
+
+  parsed run 1: Wall=4.642218 User=0.450000 Sys=0.080000 AvgCPU=97.320000% MaxCPU=100.000000% MaxRSS=7792KB
+  parsed run 2: Wall=0.617954 User=0.110000 Sys=0.000000 AvgCPU=95.000000% MaxCPU=100.000000% MaxRSS=6104KB
+  parsed run 3: Wall=0.741922 User=0.320000 Sys=0.250000 AvgCPU=99.466667% MaxCPU=104.000000% MaxRSS=7820KB
+  parsed run 4: Wall=0.586725 User=0.300000 Sys=0.120000 AvgCPU=75.000000% MaxCPU=100.000000% MaxRSS=7828KB
+  parsed run 5: Wall=0.663199 User=0.330000 Sys=0.230000 AvgCPU=98.200000% MaxCPU=100.000000% MaxRSS=7788KB
+===== Final summary for size=512 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 1.450404
+  Avg_User_seconds: 0.302000
+  Avg_Sys_seconds: 0.136000
+Memory (massif & sampled):
+  Massif_peak_heap_bytes: 4282862
+  Massif_peak_heap_kB: 4183
+  Avg_MaxRSS_kB (sampled): 7466
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 92.997333%
+  Max_CPU_percent_observed_from_sampling: 104%
+
+Callgrind outputs: Performance/callgrind.512.out, Performance/callgrind.512.annotate.txt
+Massif outputs: Performance/massif.512.out, Performance/massif.512.txt
+Native per-run logs are visible in Performance/

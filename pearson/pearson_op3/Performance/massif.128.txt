@@ -1,0 +1,663 @@
+--------------------------------------------------------------------------------
+Command:            ./pearson data/128.data output/output_128.txt
+Massif arguments:   --massif-out-file=Performance/massif.128.run3.out
+ms_print arguments: Performance/massif.128.out
+--------------------------------------------------------------------------------
+
+
+    KB
+339.1^                                                                       #
+     |                                                                       #
+     |                                                                       #
+     |                               @@@@@@@@@@@@@@@@@@                      #
+     |                               @                                       #
+     |                               @                 ::::::::::::::::::::::#
+     |                      @@@@@@@@@@                 :                     #
+     |                  @@@@@        @                 :                     #
+     |       @    ::@:::@   @        @                 :                     #
+     |       @   :@:@:  @   @        @                 :                     #
+     |       @ :::@:@:  @   @        @                 :                     #
+     |       @@:::@:@:  @   @        @                 :                     #
+     |    @ :@@:::@:@:  @   @        @                 :                     #
+     |    @:@@@:::@:@:  @   @        @                 :                     #
+     |   @@:@@@:::@:@:  @   @        @                 :                     #
+     |  :@@:@@@:::@:@:  @   @        @                 :                     #
+     | ::@@:@@@:::@:@:  @   @        @                 :                     #
+     | ::@@:@@@:::@:@:  @   @        @                 :                     #
+     | ::@@:@@@:::@:@:  @   @        @                 :                     #
+     | ::@@:@@@:::@:@:  @   @        @                 :                     #
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   78.60
+
+Number of snapshots: 61
+ Detailed snapshots: [9, 14, 20, 24, 26, 31, 45, 50, 54, 56, 58, 60 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,005,719           73,736           73,728             8            0
+  2      2,242,449           85,376           85,304            72            0
+  3      2,451,931           87,536           87,448            88            0
+  4      2,768,253           91,592           91,480           112            0
+  5      3,097,020           94,816           94,680           136            0
+  6      3,402,159           97,912           97,752           160            0
+  7      3,606,160           99,976           99,800           176            0
+  8      3,856,106          102,296          102,104           192            0
+  9      4,059,844          104,360          104,152           208            0
+99.80% (104,152B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->70.65% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->70.65% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->70.65% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->70.65% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->70.65% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->70.65% (73,728B) 0x2: ???
+|           ->70.65% (73,728B) 0x1FFF00009E: ???
+|             ->70.65% (73,728B) 0x1FFF0000A8: ???
+|               ->70.65% (73,728B) 0x1FFF0000B6: ???
+|                 
+->19.62% (20,480B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->15.70% (16,384B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->15.70% (16,384B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->15.70% (16,384B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->15.70% (16,384B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->15.70% (16,384B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->15.70% (16,384B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->15.70% (16,384B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->15.70% (16,384B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->15.70% (16,384B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->15.70% (16,384B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->15.70% (16,384B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->02.94% (3,072B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->02.94% (3,072B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->02.94% (3,072B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->02.94% (3,072B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->02.94% (3,072B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.98% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->07.85% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->07.85% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->07.85% (8,192B) 0x49908FA: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|     ->07.85% (8,192B) 0x10BC08: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:23)
+|       ->07.85% (8,192B) 0x10A7A3: main (pearson.cpp:17)
+|         
+->01.68% (1,752B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 10      4,366,214          107,456          107,224           232            0
+ 11      4,570,559          109,520          109,272           248            0
+ 12      4,773,294          111,584          111,320           264            0
+ 13      5,177,991          115,712          115,416           296            0
+ 14      5,468,839          151,832          151,256           576            0
+99.62% (151,256B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->48.56% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->48.56% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->48.56% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->48.56% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->48.56% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->48.56% (73,728B) 0x2: ???
+|           ->48.56% (73,728B) 0x1FFF00009E: ???
+|             ->48.56% (73,728B) 0x1FFF0000A8: ???
+|               ->48.56% (73,728B) 0x1FFF0000B6: ???
+|                 
+->43.84% (66,560B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->32.37% (49,152B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->32.37% (49,152B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->32.37% (49,152B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->32.37% (49,152B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->32.37% (49,152B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->32.37% (49,152B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->32.37% (49,152B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->32.37% (49,152B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->32.37% (49,152B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->32.37% (49,152B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->32.37% (49,152B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->10.12% (15,360B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->10.12% (15,360B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->10.12% (15,360B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->10.12% (15,360B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->10.12% (15,360B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->01.35% (2,048B) 0x10C4AD: construct<Vector, unsigned int&> (new_allocator.h:191)
+|   ->01.35% (2,048B) 0x10C4AD: construct<Vector, unsigned int&> (alloc_traits.h:538)
+|     ->01.35% (2,048B) 0x10C4AD: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:468)
+|       ->01.35% (2,048B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+|         ->01.35% (2,048B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+|           ->01.35% (2,048B) 0x10A7A3: main (pearson.cpp:17)
+|             
+->05.40% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->05.40% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->05.40% (8,192B) 0x49908FA: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|     ->05.40% (8,192B) 0x10BC08: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:23)
+|       ->05.40% (8,192B) 0x10A7A3: main (pearson.cpp:17)
+|         
+->01.01% (1,536B) 0x10CBF7: std::__new_allocator<Vector>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->01.01% (1,536B) 0x10C9C4: allocate (alloc_traits.h:482)
+|   ->01.01% (1,536B) 0x10C9C4: std::_Vector_base<Vector, std::allocator<Vector> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->01.01% (1,536B) 0x10C3F1: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:459)
+|       ->01.01% (1,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+|         ->01.01% (1,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+|           ->01.01% (1,536B) 0x10A7A3: main (pearson.cpp:17)
+|             
+->00.82% (1,240B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15      5,675,007          120,352          120,024           328            0
+ 16      6,081,273          124,480          124,120           360            0
+ 17      6,487,198          128,608          128,216           392            0
+ 18      6,691,449          130,672          130,264           408            0
+ 19      6,997,414          133,768          133,336           432            0
+ 20      7,302,797          136,864          136,408           456            0
+99.67% (136,408B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->53.87% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->53.87% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->53.87% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->53.87% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->53.87% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->53.87% (73,728B) 0x2: ???
+|           ->53.87% (73,728B) 0x1FFF00009E: ???
+|             ->53.87% (73,728B) 0x1FFF0000A8: ???
+|               ->53.87% (73,728B) 0x1FFF0000B6: ???
+|                 
+->38.16% (52,224B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->23.94% (32,768B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->23.94% (32,768B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->23.94% (32,768B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->23.94% (32,768B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->23.94% (32,768B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->23.94% (32,768B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->23.94% (32,768B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->23.94% (32,768B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->23.94% (32,768B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->23.94% (32,768B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->23.94% (32,768B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->13.47% (18,432B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->13.47% (18,432B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->13.47% (18,432B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->13.47% (18,432B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->13.47% (18,432B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.75% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->05.99% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->05.99% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->05.99% (8,192B) 0x49908FA: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|     ->05.99% (8,192B) 0x10BC08: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:23)
+|       ->05.99% (8,192B) 0x10A7A3: main (pearson.cpp:17)
+|         
+->01.65% (2,264B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 21      7,505,914          138,928          138,456           472            0
+ 22      7,810,752          142,024          141,528           496            0
+ 23      8,116,333          145,120          144,600           520            0
+ 24      8,320,221          147,184          146,648           536            0
+99.64% (146,648B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->50.09% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->50.09% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->50.09% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->50.09% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->50.09% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->50.09% (73,728B) 0x2: ???
+|           ->50.09% (73,728B) 0x1FFF00009E: ???
+|             ->50.09% (73,728B) 0x1FFF0000A8: ???
+|               ->50.09% (73,728B) 0x1FFF0000B6: ???
+|                 
+->42.44% (62,464B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->22.26% (32,768B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->22.26% (32,768B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->22.26% (32,768B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->22.26% (32,768B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->22.26% (32,768B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->22.26% (32,768B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->22.26% (32,768B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->22.26% (32,768B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->22.26% (32,768B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->22.26% (32,768B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->22.26% (32,768B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->19.48% (28,672B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->19.48% (28,672B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->19.48% (28,672B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->19.48% (28,672B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->19.48% (28,672B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.70% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->05.57% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->05.57% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->05.57% (8,192B) 0x49908FA: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|     ->05.57% (8,192B) 0x10BC08: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:23)
+|       ->05.57% (8,192B) 0x10A7A3: main (pearson.cpp:17)
+|         
+->01.54% (2,264B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 25      8,625,390          150,280          149,720           560            0
+ 26      8,900,993          219,416          218,328         1,088            0
+99.50% (218,328B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->60.20% (132,096B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->44.80% (98,304B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->44.80% (98,304B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->44.80% (98,304B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->44.80% (98,304B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->44.80% (98,304B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->44.80% (98,304B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->44.80% (98,304B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->44.80% (98,304B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->44.80% (98,304B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->44.80% (98,304B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->44.80% (98,304B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->14.47% (31,744B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->14.47% (31,744B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->14.47% (31,744B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->14.47% (31,744B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->14.47% (31,744B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.93% (2,048B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->33.60% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->33.60% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->33.60% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->33.60% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->33.60% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->33.60% (73,728B) 0x2: ???
+|           ->33.60% (73,728B) 0x1FFF00009E: ???
+|             ->33.60% (73,728B) 0x1FFF0000A8: ???
+|               ->33.60% (73,728B) 0x1FFF0000B6: ???
+|                 
+->03.73% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->03.73% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->03.73% (8,192B) 0x49908FA: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|     ->03.73% (8,192B) 0x10BC08: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:23)
+|       ->03.73% (8,192B) 0x10A7A3: main (pearson.cpp:17)
+|         
+->01.40% (3,072B) 0x10CBF7: std::__new_allocator<Vector>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->01.40% (3,072B) 0x10C9C4: allocate (alloc_traits.h:482)
+|   ->01.40% (3,072B) 0x10C9C4: std::_Vector_base<Vector, std::allocator<Vector> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->01.40% (3,072B) 0x10C3F1: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:459)
+|       ->01.40% (3,072B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+|         ->01.40% (3,072B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+|           ->01.40% (3,072B) 0x10A7A3: main (pearson.cpp:17)
+|             
+->00.57% (1,240B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 27      9,111,386          154,400          153,816           584            0
+ 28      9,314,458          156,464          155,864           600            0
+ 29      9,619,024          159,560          158,936           624            0
+ 30      9,822,301          161,624          160,984           640            0
+ 31     10,027,184          163,688          163,032           656            0
+99.60% (163,032B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->47.54% (77,824B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->40.04% (65,536B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->40.04% (65,536B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->40.04% (65,536B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->40.04% (65,536B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->40.04% (65,536B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->40.04% (65,536B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->40.04% (65,536B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->40.04% (65,536B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->40.04% (65,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->40.04% (65,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->40.04% (65,536B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->06.88% (11,264B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->06.88% (11,264B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->06.88% (11,264B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->06.88% (11,264B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->06.88% (11,264B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.63% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->45.04% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->45.04% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->45.04% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->45.04% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->45.04% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->45.04% (73,728B) 0x2: ???
+|           ->45.04% (73,728B) 0x1FFF00009E: ???
+|             ->45.04% (73,728B) 0x1FFF0000A8: ???
+|               ->45.04% (73,728B) 0x1FFF0000B6: ???
+|                 
+->05.00% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->05.00% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->05.00% (8,192B) 0x49908FA: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|     ->05.00% (8,192B) 0x10BC08: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:23)
+|       ->05.00% (8,192B) 0x10A7A3: main (pearson.cpp:17)
+|         
+->01.25% (2,048B) 0x10CBF7: std::__new_allocator<Vector>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->01.25% (2,048B) 0x10C9C4: allocate (alloc_traits.h:482)
+|   ->01.25% (2,048B) 0x10C9C4: std::_Vector_base<Vector, std::allocator<Vector> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->01.25% (2,048B) 0x10C3F1: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:459)
+|       ->01.25% (2,048B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+|         ->01.25% (2,048B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+|           ->01.25% (2,048B) 0x10A7A3: main (pearson.cpp:17)
+|             
+->00.76% (1,240B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32     10,333,167          166,784          166,104           680            0
+ 33     10,536,707          168,848          168,152           696            0
+ 34     10,942,627          172,976          172,248           728            0
+ 35     11,145,737          175,040          174,296           744            0
+ 36     11,550,948          179,168          178,392           776            0
+ 37     11,855,037          182,264          181,464           800            0
+ 38     12,159,808          185,360          184,536           824            0
+ 39     12,362,835          187,424          186,584           840            0
+ 40     12,667,603          190,520          189,656           864            0
+ 41     13,073,435          194,648          193,752           896            0
+ 42     13,378,637          197,744          196,824           920            0
+ 43     13,785,297          201,872          200,920           952            0
+ 44     14,090,404          204,968          203,992           976            0
+ 45     14,293,789          207,032          206,040           992            0
+99.52% (206,040B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->58.36% (120,832B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->31.66% (65,536B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->31.66% (65,536B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->31.66% (65,536B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->31.66% (65,536B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->31.66% (65,536B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->31.66% (65,536B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->31.66% (65,536B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->31.66% (65,536B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->31.66% (65,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->31.66% (65,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->31.66% (65,536B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->26.21% (54,272B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->26.21% (54,272B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->26.21% (54,272B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->26.21% (54,272B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->26.21% (54,272B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.49% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->35.61% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->35.61% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->35.61% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->35.61% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->35.61% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->35.61% (73,728B) 0x2: ???
+|           ->35.61% (73,728B) 0x1FFF00009E: ???
+|             ->35.61% (73,728B) 0x1FFF0000A8: ???
+|               ->35.61% (73,728B) 0x1FFF0000B6: ???
+|                 
+->03.96% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->03.96% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->03.96% (8,192B) 0x49908FA: std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|     ->03.96% (8,192B) 0x10BC08: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:23)
+|       ->03.96% (8,192B) 0x10A7A3: main (pearson.cpp:17)
+|         
+->01.59% (3,288B) in 3 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46     14,497,760          209,096          208,088         1,008            0
+ 47     14,903,634          213,224          212,184         1,040            0
+ 48     15,209,611          216,320          215,256         1,064            0
+ 49     15,594,650          208,672          207,616         1,056            0
+ 50     16,081,491          210,976          209,920         1,056            0
+99.50% (209,920B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->62.13% (131,072B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->31.06% (65,536B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->31.06% (65,536B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->31.06% (65,536B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->31.06% (65,536B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->31.06% (65,536B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->31.06% (65,536B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->31.06% (65,536B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->31.06% (65,536B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->31.06% (65,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->31.06% (65,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->31.06% (65,536B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->30.58% (64,512B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->30.58% (64,512B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->30.58% (64,512B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->30.58% (64,512B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->30.58% (64,512B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.49% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->34.95% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->34.95% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->34.95% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->34.95% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->34.95% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->34.95% (73,728B) 0x2: ???
+|           ->34.95% (73,728B) 0x1FFF00009E: ???
+|             ->34.95% (73,728B) 0x1FFF0000A8: ???
+|               ->34.95% (73,728B) 0x1FFF0000B6: ???
+|                 
+->01.46% (3,072B) 0x10B58D: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->01.46% (3,072B) 0x10B400: allocate (alloc_traits.h:482)
+|   ->01.46% (3,072B) 0x10B400: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->01.46% (3,072B) 0x10D844: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:459)
+|       ->01.46% (3,072B) 0x10D6D5: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1292)
+|         ->01.46% (3,072B) 0x10CE69: Analysis::correlation_coefficients(std::vector<Vector, std::allocator<Vector> > const&) (analysis.cpp:21)
+|           ->01.46% (3,072B) 0x10A7D2: main (pearson.cpp:18)
+|             
+->00.97% (2,048B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 51     16,729,168          214,048          212,992         1,056            0
+ 52     18,023,647          220,192          219,136         1,056            0
+ 53     20,611,730          232,480          231,424         1,056            0
+ 54     20,612,936          232,480          231,424         1,056            0
+99.55% (231,424B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->56.38% (131,072B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->28.19% (65,536B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->28.19% (65,536B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->28.19% (65,536B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->28.19% (65,536B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->28.19% (65,536B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->28.19% (65,536B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->28.19% (65,536B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->28.19% (65,536B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->28.19% (65,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->28.19% (65,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->28.19% (65,536B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->27.75% (64,512B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->27.75% (64,512B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->27.75% (64,512B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->27.75% (64,512B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->27.75% (64,512B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.44% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->31.71% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->31.71% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->31.71% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->31.71% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->31.71% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->31.71% (73,728B) 0x2: ???
+|           ->31.71% (73,728B) 0x1FFF00009E: ???
+|             ->31.71% (73,728B) 0x1FFF0000A8: ???
+|               ->31.71% (73,728B) 0x1FFF0000B6: ???
+|                 
+->10.57% (24,576B) 0x10B58D: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->10.57% (24,576B) 0x10B400: allocate (alloc_traits.h:482)
+|   ->10.57% (24,576B) 0x10B400: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->10.57% (24,576B) 0x10D844: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:459)
+|       ->10.57% (24,576B) 0x10D6D5: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1292)
+|         ->10.57% (24,576B) 0x10CE69: Analysis::correlation_coefficients(std::vector<Vector, std::allocator<Vector> > const&) (analysis.cpp:21)
+|           ->10.57% (24,576B) 0x10A7D2: main (pearson.cpp:18)
+|             
+->00.88% (2,048B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 55     25,787,069          257,056          256,000         1,056            0
+ 56     25,803,864          257,056          256,000         1,056            0
+99.59% (256,000B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->50.99% (131,072B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->25.49% (65,536B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->25.49% (65,536B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->25.49% (65,536B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->25.49% (65,536B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->25.49% (65,536B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->25.49% (65,536B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->25.49% (65,536B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->25.49% (65,536B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->25.49% (65,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->25.49% (65,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->25.49% (65,536B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->25.10% (64,512B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->25.10% (64,512B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->25.10% (64,512B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->25.10% (64,512B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->25.10% (64,512B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.40% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->28.68% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->28.68% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->28.68% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->28.68% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->28.68% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->28.68% (73,728B) 0x2: ???
+|           ->28.68% (73,728B) 0x1FFF00009E: ???
+|             ->28.68% (73,728B) 0x1FFF0000A8: ???
+|               ->28.68% (73,728B) 0x1FFF0000B6: ???
+|                 
+->19.12% (49,152B) 0x10B58D: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->19.12% (49,152B) 0x10B400: allocate (alloc_traits.h:482)
+|   ->19.12% (49,152B) 0x10B400: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->19.12% (49,152B) 0x10D844: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:459)
+|       ->19.12% (49,152B) 0x10D6D5: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1292)
+|         ->19.12% (49,152B) 0x10CE69: Analysis::correlation_coefficients(std::vector<Vector, std::allocator<Vector> > const&) (analysis.cpp:21)
+|           ->19.12% (49,152B) 0x10A7D2: main (pearson.cpp:18)
+|             
+->00.80% (2,048B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 57     36,151,795          306,208          305,152         1,056            0
+ 58     36,184,942          306,208          305,152         1,056            0
+99.66% (305,152B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->42.80% (131,072B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->21.40% (65,536B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->21.40% (65,536B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->21.40% (65,536B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->21.40% (65,536B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->21.40% (65,536B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->21.40% (65,536B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->21.40% (65,536B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->21.40% (65,536B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->21.40% (65,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->21.40% (65,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->21.40% (65,536B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->21.07% (64,512B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->21.07% (64,512B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->21.07% (64,512B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->21.07% (64,512B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->21.07% (64,512B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.33% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->32.10% (98,304B) 0x10B58D: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->32.10% (98,304B) 0x10B400: allocate (alloc_traits.h:482)
+|   ->32.10% (98,304B) 0x10B400: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->32.10% (98,304B) 0x10D844: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:459)
+|       ->32.10% (98,304B) 0x10D6D5: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1292)
+|         ->32.10% (98,304B) 0x10CE69: Analysis::correlation_coefficients(std::vector<Vector, std::allocator<Vector> > const&) (analysis.cpp:21)
+|           ->32.10% (98,304B) 0x10A7D2: main (pearson.cpp:18)
+|             
+->24.08% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->24.08% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->24.08% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->24.08% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->24.08% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->24.08% (73,728B) 0x2: ???
+|           ->24.08% (73,728B) 0x1FFF00009E: ???
+|             ->24.08% (73,728B) 0x1FFF0000A8: ???
+|               ->24.08% (73,728B) 0x1FFF0000B6: ???
+|                 
+->00.67% (2,048B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 59     56,554,252          273,472          272,406         1,066            0
+ 60     82,416,752          347,192          346,094         1,098            0
+99.68% (346,094B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.75% (131,072B) 0x10B828: Vector::Vector(unsigned int) (vector.cpp:26)
+| ->18.88% (65,536B) 0x10B88B: Vector::Vector(Vector const&) (vector.cpp:36)
+| | ->18.88% (65,536B) 0x10CD7B: void std::_Construct<Vector, Vector const&>(Vector*, Vector const&) (stl_construct.h:119)
+| |   ->18.88% (65,536B) 0x10CCD4: Vector* std::__do_uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:120)
+| |     ->18.88% (65,536B) 0x10CC91: Vector* std::__uninitialized_copy<false>::__uninit_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:137)
+| |       ->18.88% (65,536B) 0x10CC31: Vector* std::uninitialized_copy<Vector const*, Vector*>(Vector const*, Vector const*, Vector*) (stl_uninitialized.h:185)
+| |         ->18.88% (65,536B) 0x10CAFA: Vector* std::__uninitialized_copy_a<Vector const*, Vector*, Vector>(Vector const*, Vector const*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:373)
+| |           ->18.88% (65,536B) 0x10CA32: Vector* std::__uninitialized_move_if_noexcept_a<Vector*, Vector*, std::allocator<Vector> >(Vector*, Vector*, Vector*, std::allocator<Vector>&) (stl_uninitialized.h:399)
+| |             ->18.88% (65,536B) 0x10C4F7: void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<unsigned int&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, unsigned int&) (vector.tcc:493)
+| |               ->18.88% (65,536B) 0x10C1EB: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:123)
+| |                 ->18.88% (65,536B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |                   ->18.88% (65,536B) 0x10A7A3: main (pearson.cpp:17)
+| |                     
+| ->18.58% (64,512B) 0x10C181: construct<Vector, unsigned int&> (new_allocator.h:191)
+| | ->18.58% (64,512B) 0x10C181: construct<Vector, unsigned int&> (alloc_traits.h:538)
+| |   ->18.58% (64,512B) 0x10C181: Vector& std::vector<Vector, std::allocator<Vector> >::emplace_back<unsigned int&>(unsigned int&) (vector.tcc:117)
+| |     ->18.58% (64,512B) 0x10BCC5: Dataset::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (dataset.cpp:39)
+| |       ->18.58% (64,512B) 0x10A7A3: main (pearson.cpp:17)
+| |         
+| ->00.29% (1,024B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->37.60% (130,560B) 0x10B58D: std::__new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:151)
+| ->37.60% (130,560B) 0x10B400: allocate (alloc_traits.h:482)
+|   ->37.60% (130,560B) 0x10B400: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:381)
+|     ->18.88% (65,536B) 0x10D844: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:459)
+|     | ->18.88% (65,536B) 0x10D6D5: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:1292)
+|     |   ->18.88% (65,536B) 0x10CE69: Analysis::correlation_coefficients(std::vector<Vector, std::allocator<Vector> > const&) (analysis.cpp:21)
+|     |     ->18.88% (65,536B) 0x10A7D2: main (pearson.cpp:18)
+|     |       
+|     ->18.73% (65,024B) 0x10B29E: std::_Vector_base<double, std::allocator<double> >::_M_create_storage(unsigned long) (stl_vector.h:398)
+|       ->18.73% (65,024B) 0x10B030: std::_Vector_base<double, std::allocator<double> >::_Vector_base(unsigned long, std::allocator<double> const&) (stl_vector.h:335)
+|         ->18.73% (65,024B) 0x10AC26: std::vector<double, std::allocator<double> >::vector(std::vector<double, std::allocator<double> > const&) (stl_vector.h:603)
+|           ->18.73% (65,024B) 0x10A819: main (pearson.cpp:19)
+|             
+->21.24% (73,728B) 0x491838E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->21.24% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->21.24% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->21.24% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->21.24% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->21.24% (73,728B) 0x2: ???
+|           ->21.24% (73,728B) 0x1FFF00009E: ???
+|             ->21.24% (73,728B) 0x1FFF0000A8: ???
+|               ->21.24% (73,728B) 0x1FFF0000B6: ???
+|                 
+->02.36% (8,192B) 0x498BBC3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->02.36% (8,192B) 0x498FF46: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   ->02.36% (8,192B) 0x499005E: std::basic_ofstream<char, std::char_traits<char> >::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|   | ->02.36% (8,192B) 0x10BED4: Dataset::write(std::vector<double, std::allocator<double> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (dataset.cpp:65)
+|   |   ->02.36% (8,192B) 0x10A82C: main (pearson.cpp:19)
+|   |     
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->00.73% (2,542B) in 1+ places, all below ms_print's threshold (01.00%)
+
