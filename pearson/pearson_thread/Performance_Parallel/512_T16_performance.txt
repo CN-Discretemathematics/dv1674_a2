@@ -1,0 +1,19 @@
+========== Measuring size=512, T=16 ==========
+Data: data/512.data -> output/output_512_T16.txt
+Threads: 16
+
+  parsed run 1: Wall=0.483993 User=0.650000 Sys=0.120000 AvgCPU=224.400000% MaxCPU=490.000000% MaxRSS=7676KB
+  parsed run 2: Wall=0.526240 User=0.610000 Sys=0.170000 AvgCPU=286.000000% MaxCPU=475.000000% MaxRSS=7704KB
+  parsed run 3: Wall=0.486974 User=0.640000 Sys=0.130000 AvgCPU=230.000000% MaxCPU=509.000000% MaxRSS=7668KB
+  parsed run 4: Wall=0.460733 User=0.670000 Sys=0.180000 AvgCPU=295.750000% MaxCPU=518.000000% MaxRSS=7836KB
+  parsed run 5: Wall=0.486279 User=0.620000 Sys=0.160000 AvgCPU=427.400000% MaxCPU=1150.000000% MaxRSS=7704KB
+===== Final summary for size=512, T=16 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 0.488844
+  Avg_User_seconds: 0.638000
+  Avg_Sys_seconds: 0.152000
+Memory (sampled):
+  Avg_MaxRSS_kB (sampled): 7718
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 292.710000%
+  Max_CPU_percent_observed_from_sampling: 1150%

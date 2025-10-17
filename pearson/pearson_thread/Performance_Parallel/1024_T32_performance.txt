@@ -1,0 +1,19 @@
+========== Measuring size=1024, T=32 ==========
+Data: data/1024.data -> output/output_1024_T32.txt
+Threads: 32
+
+  parsed run 1: Wall=1.806648 User=4.770000 Sys=0.500000 AvgCPU=611.214286% MaxCPU=1296.000000% MaxRSS=19988KB
+  parsed run 2: Wall=1.777419 User=4.790000 Sys=0.860000 AvgCPU=587.937500% MaxCPU=1357.000000% MaxRSS=19956KB
+  parsed run 3: Wall=1.810214 User=4.900000 Sys=0.740000 AvgCPU=566.750000% MaxCPU=1303.000000% MaxRSS=19952KB
+  parsed run 4: Wall=1.761666 User=4.990000 Sys=0.700000 AvgCPU=603.125000% MaxCPU=1351.000000% MaxRSS=20128KB
+  parsed run 5: Wall=1.778000 User=4.580000 Sys=1.080000 AvgCPU=593.388889% MaxCPU=1210.000000% MaxRSS=19992KB
+===== Final summary for size=1024, T=32 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 1.786789
+  Avg_User_seconds: 4.806000
+  Avg_Sys_seconds: 0.776000
+Memory (sampled):
+  Avg_MaxRSS_kB (sampled): 20003
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 592.483135%
+  Max_CPU_percent_observed_from_sampling: 1357%

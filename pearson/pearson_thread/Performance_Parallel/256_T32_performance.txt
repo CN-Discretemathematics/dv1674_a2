@@ -1,0 +1,19 @@
+========== Measuring size=256, T=32 ==========
+Data: data/256.data -> output/output_256_T32.txt
+Threads: 32
+
+  parsed run 1: Wall=0.102064 User=0.070000 Sys=0.020000 AvgCPU=700.000000% MaxCPU=700.000000% MaxRSS=4596KB
+  parsed run 2: Wall=0.100351 User=0.070000 Sys=0.020000 AvgCPU=700.000000% MaxCPU=700.000000% MaxRSS=4596KB
+  parsed run 3: Wall=0.133741 User=0.070000 Sys=0.020000 AvgCPU=700.000000% MaxCPU=700.000000% MaxRSS=4504KB
+  parsed run 4: Wall=0.102360 User=0.080000 Sys=0.020000 AvgCPU=800.000000% MaxCPU=800.000000% MaxRSS=4452KB
+  parsed run 5: Wall=0.183827 User=0.070000 Sys=0.020000 AvgCPU=350.000000% MaxCPU=700.000000% MaxRSS=4472KB
+===== Final summary for size=256, T=32 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 0.124469
+  Avg_User_seconds: 0.072000
+  Avg_Sys_seconds: 0.020000
+Memory (sampled):
+  Avg_MaxRSS_kB (sampled): 4524
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 650.000000%
+  Max_CPU_percent_observed_from_sampling: 800%

@@ -1,0 +1,19 @@
+========== Measuring size=128, T=16 ==========
+Data: data/128.data -> output/output_128_T16.txt
+Threads: 16
+
+  parsed run 1: Wall=0.138664 User=0.000000 Sys=0.000000 AvgCPU=200.000000% MaxCPU=200.000000% MaxRSS=0KB
+  parsed run 2: Wall=0.094088 User=0.000000 Sys=0.000000 AvgCPU=200.000000% MaxCPU=200.000000% MaxRSS=0KB
+  parsed run 3: Wall=0.100028 User=0.000000 Sys=0.000000 AvgCPU=200.000000% MaxCPU=200.000000% MaxRSS=0KB
+  parsed run 4: Wall=0.094590 User=0.000000 Sys=0.000000 AvgCPU=200.000000% MaxCPU=200.000000% MaxRSS=0KB
+  parsed run 5: Wall=0.086507 User=0.000000 Sys=0.000000 AvgCPU=100.000000% MaxCPU=100.000000% MaxRSS=0KB
+===== Final summary for size=128, T=16 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 0.102775
+  Avg_User_seconds: 0.000000
+  Avg_Sys_seconds: 0.000000
+Memory (sampled):
+  Avg_MaxRSS_kB (sampled): 0
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 180.000000%
+  Max_CPU_percent_observed_from_sampling: 200%
