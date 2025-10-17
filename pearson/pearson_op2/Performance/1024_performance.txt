@@ -1,0 +1,39 @@
+========== Measuring size=1024 ==========
+Data: data/1024.data -> output/output_1024.txt
+
+Callgrind top candidate functions (heuristic):
+    23,784,483,574 (100.0%)  PROGRAM TOTALS
+    19,899,821,568 (83.67%)  analysis.cpp:Analysis::pearson(Vector const&, Vector const&) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+       624,815,651 ( 2.63%)  ./stdio-common/./stdio-common/printf_fp.c:__printf_fp_buffer_1.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       447,484,965 ( 1.88%)  ./stdlib/./stdlib/strtod_l.c:____strtod_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       347,080,902 ( 1.46%)  ???:std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_float(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, std::string&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+       228,467,042 ( 0.96%)  ./stdlib/../sysdeps/x86_64/mul_1.S:__mpn_mul_1 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       110,097,408 ( 0.46%)  ???:std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::do_get(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, double&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+       102,136,320 ( 0.43%)  ./stdio-common/./stdio-common/vfprintf-internal.c:__printf_buffer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+        84,653,698 ( 0.36%)  ./stdlib/./stdlib/strtod_l.c:str_to_mpn.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+        76,995,072 ( 0.32%)  ???:std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+
+Massif peak heap (bytes): 23175168
+Massif peak heap (KB): 22632
+
+  parsed run 1: Wall=4.106717 User=3.060000 Sys=0.840000 AvgCPU=97.013793% MaxCPU=109.000000% MaxRSS=23724KB
+  parsed run 2: Wall=3.984731 User=2.940000 Sys=0.960000 AvgCPU=97.339394% MaxCPU=111.000000% MaxRSS=24120KB
+  parsed run 3: Wall=3.928401 User=2.800000 Sys=0.880000 AvgCPU=96.183333% MaxCPU=101.000000% MaxRSS=24164KB
+  parsed run 4: Wall=3.909581 User=2.920000 Sys=0.910000 AvgCPU=99.803226% MaxCPU=101.000000% MaxRSS=24036KB
+  parsed run 5: Wall=3.833664 User=2.830000 Sys=0.930000 AvgCPU=96.619231% MaxCPU=109.000000% MaxRSS=24004KB
+===== Final summary for size=1024 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 3.952619
+  Avg_User_seconds: 2.910000
+  Avg_Sys_seconds: 0.904000
+Memory (massif & sampled):
+  Massif_peak_heap_bytes: 23175168
+  Massif_peak_heap_kB: 22632
+  Avg_MaxRSS_kB (sampled): 24010
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 97.391795%
+  Max_CPU_percent_observed_from_sampling: 111%
+
+Callgrind outputs: Performance/callgrind.1024.out, Performance/callgrind.1024.annotate.txt
+Massif outputs: Performance/massif.1024.out, Performance/massif.1024.txt
+Native per-run logs are visible in Performance/
