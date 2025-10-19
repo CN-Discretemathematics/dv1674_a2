@@ -1,0 +1,6 @@
+==53366== Massif, a heap profiler
+==53366== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==53366== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==53366== Command: ./pearson data/512.data output/output_512.txt
+==53366== 
+==53366== 

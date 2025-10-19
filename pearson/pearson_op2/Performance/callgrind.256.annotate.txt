@@ -1,0 +1,1660 @@
+--------------------------------------------------------------------------------
+Profile data file 'Performance/callgrind.256.out' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 60059027
+Trigger: Program termination
+Profiled target:  ./pearson data/256.data output/output_256.txt (PID 49191, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+557,684,416 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                    file:function
+--------------------------------------------------------------------------------
+312,593,280 (56.05%)  analysis.cpp:Analysis::pearson(Vector const&, Vector const&) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+ 38,606,435 ( 6.92%)  ./stdio-common/./stdio-common/printf_fp.c:__printf_fp_buffer_1.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 27,969,490 ( 5.02%)  ./stdlib/./stdlib/strtod_l.c:____strtod_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 21,691,290 ( 3.89%)  ???:std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_float(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, std::string&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+ 14,176,098 ( 2.54%)  ./stdlib/../sysdeps/x86_64/mul_1.S:__mpn_mul_1 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  6,880,512 ( 1.23%)  ???:std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::do_get(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, double&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  6,364,800 ( 1.14%)  ./stdio-common/./stdio-common/vfprintf-internal.c:__printf_buffer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  5,290,069 ( 0.95%)  ./stdlib/./stdlib/strtod_l.c:str_to_mpn.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  4,798,080 ( 0.86%)  ???:std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  4,717,296 ( 0.85%)  ???:0x0000000000147b90 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  4,717,260 ( 0.85%)  ???:std::string::push_back(char) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  4,132,980 ( 0.74%)  ???:std::istream::sentry::sentry(std::istream&, bool) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  3,980,240 ( 0.71%)  ./stdlib/./stdlib/mul.c:__mpn_mul [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  3,944,681 ( 0.71%)  vector.cpp:Vector::Vector(Vector const&) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+  3,595,472 ( 0.64%)  ./malloc/./malloc/malloc.c:_int_free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  3,409,408 ( 0.61%)  ???:std::istream& std::istream::_M_extract<double>(double&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  3,180,310 ( 0.57%)  ./stdlib/./stdlib/strtod_l.c:round_and_return [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  3,004,321 ( 0.54%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  2,617,968 ( 0.47%)  ./stdlib/../sysdeps/x86_64/lshift.S:__mpn_lshift [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  2,489,684 ( 0.45%)  ???:0x00000000001164e0 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,488,040 ( 0.45%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_chk_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  2,382,720 ( 0.43%)  ./stdio-common/./stdio-common/Xprintf_buffer_write.c:__printf_buffer_write [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  2,359,296 ( 0.42%)  ???:void std::__convert_to_v<double>(char const*, double&, std::_Ios_Iostate&, __locale_struct* const&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,159,894 ( 0.39%)  ???:0x0000000000142070 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,154,315 ( 0.39%)  ???:std::ostream::sentry::sentry(std::ostream&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  2,097,152 ( 0.38%)  ???:std::string::reserve(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,966,080 ( 0.35%)  /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::_M_read() [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+  1,893,132 ( 0.34%)  ???:std::ostream& std::ostream::_M_insert<double>(double) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,871,760 ( 0.34%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,860,480 ( 0.33%)  ./stdio-common/./stdio-common/printf_fp.c:__printf_fp_l_buffer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,762,560 ( 0.32%)  ???:0x000000000010d1d0 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,729,973 ( 0.31%)  ???:std::basic_filebuf<char, std::char_traits<char> >::overflow(int) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,703,936 ( 0.31%)  ???:std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,675,552 ( 0.30%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,572,864 ( 0.28%)  ???:std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,472,850 ( 0.26%)  ???:std::locale::facet::_S_get_c_locale() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,436,204 ( 0.26%)  ./locale/./locale/uselocale.c:uselocale [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,375,458 ( 0.25%)  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,370,898 ( 0.25%)  ???:std::basic_streambuf<char, std::char_traits<char> >::xsputn(char const*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,338,373 ( 0.24%)  ???:std::ostream::flush() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,338,240 ( 0.24%)  ???:std::ostream::put(char) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,272,964 ( 0.23%)  ???:std::basic_filebuf<char, std::char_traits<char> >::xsputn(char const*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,240,320 ( 0.22%)  ./string/../sysdeps/x86_64/multiarch/strchr-avx2.S:__strchrnul_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,240,320 ( 0.22%)  ???:std::basic_filebuf<char, std::char_traits<char> >::_M_convert_to_external(char*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,110,574 ( 0.20%)  ./stdio-common/./stdio-common/printf_fp.c:hack_digit [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,083,277 ( 0.19%)  analysis.cpp:Analysis::correlation_coefficients(std::vector<Vector, std::allocator<Vector> >) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+  1,069,536 ( 0.19%)  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+  1,051,392 ( 0.19%)  /usr/include/c++/13/bits/stl_algobase.h:double* std::__copy_n_a<std::istream_iterator<double, char, std::char_traits<char>, long>, unsigned int, double*>(std::istream_iterator<double, char, std::char_traits<char>, long>, unsigned int, double*, bool) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+  1,048,160 ( 0.19%)  ./stdlib/../sysdeps/ieee754/dbl-64/mpn2dbl.c:__mpn_construct_double [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  1,044,527 ( 0.19%)  dataset.cpp:Dataset::write(std::vector<double, std::allocator<double> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    979,200 ( 0.18%)  ./libio/./libio/vsnprintf.c:vsnprintf [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    979,200 ( 0.18%)  ???:std::__num_base::_S_format_float(std::ios_base const&, char*, char) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    979,136 ( 0.18%)  /usr/include/c++/13/bits/stl_vector.h:std::vector<double, std::allocator<double> >::push_back(double const&) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    881,280 ( 0.16%)  ???:std::__basic_file<char>::xsputn(char const*, long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    851,981 ( 0.15%)  ???:0x000000000013eae0 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    799,758 ( 0.14%)  ???:std::locale::id::_M_id() const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    783,360 ( 0.14%)  /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::operator[](unsigned long) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    718,080 ( 0.13%)  ./stdlib/../sysdeps/ieee754/dbl-64/dbl2mpn.c:__mpn_extract_double [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    718,080 ( 0.13%)  /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::operator++() [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    685,440 ( 0.12%)  ???:std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    675,123 ( 0.12%)  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S:__memchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    656,280 ( 0.12%)  ./stdlib/../sysdeps/x86_64/rshift.S:__mpn_rshift [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    655,100 ( 0.12%)  ./stdlib/../sysdeps/generic/get-rounding-mode.h:round_and_return
+    620,160 ( 0.11%)  ./stdio-common/./stdio-common/Xprintf_buffer_done.c:__printf_buffer_done [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    608,922 ( 0.11%)  ./stdlib/../string/bits/string_fortified.h:____strtod_l_internal
+    589,139 ( 0.11%)  ./nptl/./nptl/pthread_once.c:pthread_once@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    524,288 ( 0.09%)  /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::operator*() const [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    523,984 ( 0.09%)  ./stdlib/../include/rounding-mode.h:round_and_return
+    522,240 ( 0.09%)  vector.cpp:Vector::get_data() const [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    513,784 ( 0.09%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    509,662 ( 0.09%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+    489,600 ( 0.09%)  ???:std::basic_filebuf<char, std::char_traits<char> >::sync() [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    457,072 ( 0.08%)  /usr/include/c++/13/bits/move.h:double const& std::forward<double const&>(std::remove_reference<double const&>::type&) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    456,960 ( 0.08%)  /usr/include/c++/13/bits/stl_algobase.h:double const& std::max<double>(double const&, double const&) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    456,960 ( 0.08%)  /usr/include/c++/13/bits/stl_algobase.h:double const& std::min<double>(double const&, double const&) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    431,444 ( 0.08%)  /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::size() const [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    425,178 ( 0.08%)  /usr/include/c++/13/bits/stl_vector.h:std::vector<double, std::allocator<double> >::size() const [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    392,994 ( 0.07%)  ???:0x000000000013e850 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    391,680 ( 0.07%)  /usr/include/c++/13/bits/stl_vector.h:std::vector<double, std::allocator<double> >::operator[](unsigned long) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    359,040 ( 0.06%)  ./nptl/./nptl/alloca_cutoff.c:__libc_alloca_cutoff [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    358,864 ( 0.06%)  /usr/include/c++/13/bits/new_allocator.h:std::vector<double, std::allocator<double> >::push_back(double const&)
+    294,564 ( 0.05%)  ./stdio-common/../include/printf_buffer.h:__printf_fp_buffer_1.isra.0
+    293,760 ( 0.05%)  ./stdio-common/./stdio-common/printf-parse.h:__printf_buffer
+    293,616 ( 0.05%)  /usr/include/c++/13/bits/alloc_traits.h:std::vector<double, std::allocator<double> >::push_back(double const&)
+    275,123 ( 0.05%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    267,256 ( 0.05%)  /usr/include/c++/13/new:operator new(unsigned long, void*) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    266,447 ( 0.05%)  ???:0x00000000048f3800 [???]
+    262,152 ( 0.05%)  ???:std::basic_ios<char, std::char_traits<char> >::operator!() const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    262,144 ( 0.05%)  ./stdlib/./stdlib/strtod_l.c:strtod_l [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    262,075 ( 0.05%)  ???:0x00000000048f4ed0 [???]
+    261,120 ( 0.05%)  ./io/../sysdeps/unix/sysv/linux/write.c:write [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    261,120 ( 0.05%)  ./stdio-common/../sysdeps/generic/get-rounding-mode.h:__printf_fp_buffer_1.isra.0
+    261,120 ( 0.05%)  vector.cpp:Vector::get_size() const [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    248,804 ( 0.04%)  ???:0x0000000004c0e6f0 [???]
+    228,830 ( 0.04%)  ./libio/./libio/fileno.c:fileno [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    228,480 ( 0.04%)  ./libio/../include/printf_buffer.h:vsnprintf
+    228,480 ( 0.04%)  /usr/include/c++/13/iomanip:std::setprecision(int) [/home/zxn1225/Desktop/performance_opti/pearson_op2/pearson]
+    228,480 ( 0.04%)  ???:std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    200,538 ( 0.04%)  ./malloc/./malloc/arena.c:free
+    196,490 ( 0.04%)  ???:0x0000000004c0e500 [???]
+    196,385 ( 0.04%)  ???:0x00000000048f3790 [???]
+    196,385 ( 0.04%)  ???:0x00000000048f53c0 [???]
+    195,993 ( 0.04%)  ???:std::codecvt<char, char, __mbstate_t>::do_always_noconv() const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+    195,851 ( 0.04%)  ???:0x00000000048f6360 [???]
+    190,311 ( 0.03%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    163,200 ( 0.03%)  ./math/./math/w_sqrt_compat.c:sqrt [/usr/lib/x86_64-linux-gnu/libm.so.6]
+    163,200 ( 0.03%)  ./stdio-common/../sysdeps/pthread/allocalim.h:__printf_fp_buffer_1.isra.0
+    147,236 ( 0.03%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    133,699 ( 0.02%)  ???:0x00000000048f3210 [???]
+    133,697 ( 0.02%)  ???:0x00000000048f3430 [???]
+    133,697 ( 0.02%)  ???:0x00000000048f3c60 [???]
+    133,692 ( 0.02%)  ???:operator delete(void*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33]
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/new
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 167 ----------------------------------------
+      .             _GLIBCXX_USE_NOEXCEPT __attribute__((__externally_visible__));
+      .           void operator delete[](void*, std::size_t, std::align_val_t)
+      .             _GLIBCXX_USE_NOEXCEPT __attribute__((__externally_visible__));
+      .           #endif // __cpp_sized_deallocation
+      .           #endif // __cpp_aligned_new
+      .           
+      .           // Default placement versions of operator new.
+      .           _GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+267,256 ( 0.05%)  { return __p; }
+      .           _GLIBCXX_NODISCARD inline void* operator new[](std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+      .           { return __p; }
+      .           
+      .           // Default placement versions of operator delete.
+      .           inline void operator delete  (void*, void*) _GLIBCXX_USE_NOEXCEPT { }
+      .           inline void operator delete[](void*, void*) _GLIBCXX_USE_NOEXCEPT { }
+      .           //@}
+      .           } // extern "C++"
+-- line 183 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/move.h
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 43 ----------------------------------------
+      .           
+      .             // Used, in C++03 mode too, by allocators, etc.
+      .             /**
+      .              *  @brief Same as C++11 std::addressof
+      .              *  @ingroup utilities
+      .              */
+      .             template<typename _Tp>
+      .               inline _GLIBCXX_CONSTEXPR _Tp*
+  6,136 ( 0.00%)      __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+  4,602 ( 0.00%)      { return __builtin_addressof(__r); }
+      .           
+      .           #if __cplusplus >= 201103L
+      .           
+      .             /**
+      .              *  @addtogroup utilities
+      .              *  @{
+      .              */
+      .           
+-- line 60 ----------------------------------------
+-- line 62 ----------------------------------------
+      .              *  @brief  Forward an lvalue.
+      .              *  @return The parameter cast to the specified type.
+      .              *
+      .              *  This function is used to implement "perfect forwarding".
+      .              */
+      .             template<typename _Tp>
+      .               _GLIBCXX_NODISCARD
+      .               constexpr _Tp&&
+265,312 ( 0.05%)      forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+198,984 ( 0.04%)      { return static_cast<_Tp&&>(__t); }
+      .           
+      .             /**
+      .              *  @brief  Forward an rvalue.
+      .              *  @return The parameter cast to the specified type.
+      .              *
+      .              *  This function is used to implement "perfect forwarding".
+      .              */
+      .             template<typename _Tp>
+-- line 79 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: dataset.cpp
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 10 ----------------------------------------
+      .           #include <iterator>
+      .           #include <algorithm>
+      .           #include <iomanip>
+      .           #include <limits>
+      .           
+      .           namespace Dataset
+      .           {
+      .               std::vector<Vector> read(std::string filename)
+     11 ( 0.00%)      {
+      1 ( 0.00%)          unsigned dimension{};
+      7 ( 0.00%)          std::vector<Vector> result{};
+     52 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::vector() (1x)
+      3 ( 0.00%)          std::ifstream f{};
+  2,339 ( 0.00%)  => ???:0x000000000010a500 (1x)
+      .           
+      6 ( 0.00%)          f.open(filename);
+  7,043 ( 0.00%)  => ???:0x000000000010a460 (1x)
+      .           
+      6 ( 0.00%)          if (!f)
+      6 ( 0.00%)  => ???:0x000000000010a3a0 (1x)
+      .                   {
+      .                       std::cerr << "Failed to read dataset(s) from file " << filename << std::endl;
+      .                       return result;
+      .                   }
+      .           
+      5 ( 0.00%)          f >> dimension;
+  6,520 ( 0.00%)  => ???:0x000000000010a340 (1x)
+      3 ( 0.00%)          std::string line{};
+      8 ( 0.00%)  => ???:0x000000000010a550 (1x)
+      .           
+      5 ( 0.00%)          std::getline(f, line); // ignore first newline
+  3,771 ( 0.00%)  => ???:0x000000000010a350 (1x)
+      .           
+  3,342 ( 0.00%)          while (std::getline(f, line))
+166,687 ( 0.03%)  => ???:0x000000000010a350 (257x)
+  1,542 ( 0.00%)  => ???:0x000000000010a530 (257x)
+      .                   {
+  2,304 ( 0.00%)              std::stringstream ss{line};
+375,260 ( 0.07%)  => ???:0x000000000010a5a0 (256x)
+  2,304 ( 0.00%)  => /usr/include/c++/13/bits/ios_base.h:std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) (256x)
+  1,280 ( 0.00%)              Vector new_vec{dimension};
+ 72,494 ( 0.01%)  => /home/zxn1225/Desktop/performance_opti/pearson_op2/vector.cpp:Vector::Vector(unsigned int) (256x)
+  3,840 ( 0.00%)              std::copy_n(std::istream_iterator<double>{ss},
+126,199,078 (22.63%)  => /usr/include/c++/13/bits/stl_algo.h:double* std::copy_n<std::istream_iterator<double, char, std::char_traits<char>, long>, unsigned int, double*>(std::istream_iterator<double, char, std::char_traits<char>, long>, unsigned int, double*) (256x)
+498,230 ( 0.09%)  => /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::istream_iterator(std::istream&) (256x)
+  2,048 ( 0.00%)  => /home/zxn1225/Desktop/performance_opti/pearson_op2/vector.cpp:Vector::get_data() (256x)
+      .                                   dimension,
+      .                                   new_vec.get_data());
+  1,280 ( 0.00%)              result.push_back(new_vec);
+2,906,896 ( 0.52%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::push_back(Vector const&) (256x)
+  1,536 ( 0.00%)          }
+ 84,102 ( 0.02%)  => ???:0x000000000010a400 (256x)
+ 55,679 ( 0.01%)  => /home/zxn1225/Desktop/performance_opti/pearson_op2/vector.cpp:Vector::~Vector() (256x)
+      .           
+      1 ( 0.00%)          return result;
+     15 ( 0.00%)      }
+  6,149 ( 0.00%)  => ???:0x000000000010a360 (1x)
+    183 ( 0.00%)  => ???:0x000000000010a3d0 (1x)
+      .           
+      .               void write(std::vector<double> data, std::string filename)
+     10 ( 0.00%)      {
+      3 ( 0.00%)          std::ofstream f{};
+    609 ( 0.00%)  => ???:0x000000000010a5d0 (1x)
+      .           
+      6 ( 0.00%)          f.open(filename);
+    887 ( 0.00%)  => ???:0x000000000010a3b0 (1x)
+      .           
+      6 ( 0.00%)          if (!f)
+      6 ( 0.00%)  => ???:0x000000000010a3a0 (1x)
+      .                   {
+      .                       std::cerr << "Failed to write data to file " << filename << std::endl;
+      .                       return;
+      .                   }
+      .           
+326,411 ( 0.06%)          for (auto i{0}; i < data.size(); i++)
+424,333 ( 0.08%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<double, std::allocator<double> >::size() const (32,641x)
+      .                   {
+718,080 ( 0.13%)              f << std::setprecision(std::numeric_limits<double>::digits10 + 1) << data[i] << std::endl;
+91,082,894 (16.33%)  => ???:0x000000000010a600 (32,640x)
+10,546,639 ( 1.89%)  => ???:0x000000000010a4b0 (32,640x)
+391,680 ( 0.07%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<double, std::allocator<double> >::operator[](unsigned long) (32,640x)
+293,760 ( 0.05%)  => ???:0x000000000010a590 (32,640x)
+228,480 ( 0.04%)  => /usr/include/c++/13/iomanip:std::setprecision(int) (32,640x)
+      .                   }
+     11 ( 0.00%)      }
+    929 ( 0.00%)  => ???:0x000000000010a580 (1x)
+      .           
+      .           };
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/stl_algobase.h
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 225 ----------------------------------------
+      .              *
+      .              *  This is the simple classic generic implementation.  It will work on
+      .              *  temporary expressions, since they are only evaluated once, unlike a
+      .              *  preprocessor macro.
+      .             */
+      .             template<typename _Tp>
+      .               _GLIBCXX14_CONSTEXPR
+      .               inline const _Tp&
+163,450 ( 0.03%)      min(const _Tp& __a, const _Tp& __b)
+      .               {
+      .                 // concept requirements
+      .                 __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
+      .                 //return __b < __a ? __b : __a;
+196,140 ( 0.04%)        if (__b < __a)
+      .           	return __b;
+ 32,690 ( 0.01%)        return __a;
+ 65,380 ( 0.01%)      }
+      .           
+      .             /**
+      .              *  @brief This does what you think it does.
+      .              *  @ingroup sorting_algorithms
+      .              *  @param  __a  A thing of arbitrary type.
+      .              *  @param  __b  Another thing of arbitrary type.
+      .              *  @return   The greater of the parameters.
+      .              *
+      .              *  This is the simple classic generic implementation.  It will work on
+      .              *  temporary expressions, since they are only evaluated once, unlike a
+      .              *  preprocessor macro.
+      .             */
+      .             template<typename _Tp>
+      .               _GLIBCXX14_CONSTEXPR
+      .               inline const _Tp&
+163,325 ( 0.03%)      max(const _Tp& __a, const _Tp& __b)
+      .               {
+      .                 // concept requirements
+      .                 __glibcxx_function_requires(_LessThanComparableConcept<_Tp>)
+      .                 //return  __a < __b ? __b : __a;
+195,990 ( 0.04%)        if (__a < __b)
+      4 ( 0.00%)  	return __b;
+ 32,663 ( 0.01%)        return __a;
+ 65,330 ( 0.01%)      }
+      .           
+      .             /**
+      .              *  @brief This does what you think it does.
+      .              *  @ingroup sorting_algorithms
+      .              *  @param  __a  A thing of arbitrary type.
+      .              *  @param  __b  Another thing of arbitrary type.
+      .              *  @param  __comp  A @link comparison_functors comparison functor@endlink.
+      .              *  @return   The lesser of the parameters.
+-- line 273 ----------------------------------------
+-- line 308 ----------------------------------------
+      .                 return __a;
+      .               }
+      .           
+      .             // Fallback implementation of the function in bits/stl_iterator.h used to
+      .             // remove the __normal_iterator wrapper. See copy, fill, ...
+      .             template<typename _Iterator>
+      .               _GLIBCXX20_CONSTEXPR
+      .               inline _Iterator
+  1,412 ( 0.00%)      __niter_base(_Iterator __it)
+      .               _GLIBCXX_NOEXCEPT_IF(std::is_nothrow_copy_constructible<_Iterator>::value)
+  1,059 ( 0.00%)      { return __it; }
+      .           
+      .             template<typename _Ite, typename _Seq>
+      .               _Ite
+      .               __niter_base(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq,
+      .           		 std::random_access_iterator_tag>&);
+      .           
+      .             // Reverse the __niter_base transformation to get a
+      .             // __normal_iterator back again (this assumes that __normal_iterator
+-- line 326 ----------------------------------------
+-- line 330 ----------------------------------------
+      .               inline _From
+      .               __niter_wrap(_From __from, _To __res)
+      .               { return __from + (__res - std::__niter_base(__from)); }
+      .           
+      .             // No need to wrap, iterator already has the right type.
+      .             template<typename _Iterator>
+      .               _GLIBCXX20_CONSTEXPR
+      .               inline _Iterator
+  1,285 ( 0.00%)      __niter_wrap(const _Iterator&, _Iterator __res)
+    771 ( 0.00%)      { return __res; }
+      .           
+      .             // All of these auxiliary structs serve two purposes.  (1) Replace
+      .             // calls to copy with memmove whenever possible.  (Memmove, not memcpy,
+      .             // because the input and output ranges are permitted to overlap.)
+      .             // (2) If we're using random access iterators, then write the loop as
+      .             // a for loop with an explicit count.
+      .           
+      .             template<bool _IsMove, bool _IsSimple, typename _Category>
+-- line 347 ----------------------------------------
+-- line 425 ----------------------------------------
+      .           #endif
+      .           
+      .             template<bool _IsMove>
+      .               struct __copy_move<_IsMove, true, random_access_iterator_tag>
+      .               {
+      .                 template<typename _Tp, typename _Up>
+      .           	_GLIBCXX20_CONSTEXPR
+      .           	static _Up*
+      7 ( 0.00%)  	__copy_m(_Tp* __first, _Tp* __last, _Up* __result)
+      .           	{
+      4 ( 0.00%)  	  const ptrdiff_t _Num = __last - __first;
+      5 ( 0.00%)  	  if (__builtin_expect(_Num > 1, true))
+      8 ( 0.00%)  	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
+261,106 ( 0.05%)  => ???:0x000000000010a5b0 (1x)
+      .           	  else if (_Num == 1)
+      .           	    std::__copy_move<_IsMove, false, random_access_iterator_tag>::
+      .           	      __assign_one(__result, __first);
+      4 ( 0.00%)  	  return __result + _Num;
+      2 ( 0.00%)  	}
+      .               };
+      .           
+      .           _GLIBCXX_BEGIN_NAMESPACE_CONTAINER
+      .           
+      .             template<typename _Tp, typename _Ref, typename _Ptr>
+      .               struct _Deque_iterator;
+      .           
+      .             struct _Bit_iterator;
+-- line 450 ----------------------------------------
+-- line 489 ----------------------------------------
+      .           	istreambuf_iterator<_CharT, char_traits<_CharT> >,
+      .           	istreambuf_iterator<_CharT, char_traits<_CharT> >,
+      .           	_GLIBCXX_STD_C::_Deque_iterator<_CharT, _CharT&, _CharT*>);
+      .           #endif // HOSTED
+      .           
+      .             template<bool _IsMove, typename _II, typename _OI>
+      .               _GLIBCXX20_CONSTEXPR
+      .               inline _OI
+      7 ( 0.00%)      __copy_move_a2(_II __first, _II __last, _OI __result)
+      .               {
+      .                 typedef typename iterator_traits<_II>::iterator_category _Category;
+      .           #ifdef __cpp_lib_is_constant_evaluated
+      .                 if (std::is_constant_evaluated())
+      .           	return std::__copy_move<_IsMove, false, _Category>::
+      .           	  __copy_m(__first, __last, __result);
+      .           #endif
+      .                 return std::__copy_move<_IsMove, __memcpyable<_OI, _II>::__value,
+      6 ( 0.00%)  			      _Category>::__copy_m(__first, __last, __result);
+261,136 ( 0.05%)  => /usr/include/c++/13/bits/stl_algobase.h:double* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<double const, double>(double const*, double const*, double*) (1x)
+      2 ( 0.00%)      }
+      .           
+      .             template<bool _IsMove,
+      .           	   typename _Tp, typename _Ref, typename _Ptr, typename _OI>
+      .               _OI
+      .               __copy_move_a1(_GLIBCXX_STD_C::_Deque_iterator<_Tp, _Ref, _Ptr>,
+      .           		   _GLIBCXX_STD_C::_Deque_iterator<_Tp, _Ref, _Ptr>,
+      .           		   _OI);
+      .           
+-- line 515 ----------------------------------------
+-- line 524 ----------------------------------------
+      .               typename __gnu_cxx::__enable_if<
+      .                 __is_random_access_iter<_II>::__value,
+      .                 _GLIBCXX_STD_C::_Deque_iterator<_Tp, _Tp&, _Tp*> >::__type
+      .               __copy_move_a1(_II, _II, _GLIBCXX_STD_C::_Deque_iterator<_Tp, _Tp&, _Tp*>);
+      .           
+      .             template<bool _IsMove, typename _II, typename _OI>
+      .               _GLIBCXX20_CONSTEXPR
+      .               inline _OI
+      7 ( 0.00%)      __copy_move_a1(_II __first, _II __last, _OI __result)
+      8 ( 0.00%)      { return std::__copy_move_a2<_IsMove>(__first, __last, __result); }
+261,151 ( 0.05%)  => /usr/include/c++/13/bits/stl_algobase.h:double* std::__copy_move_a2<false, double const*, double*>(double const*, double const*, double*) (1x)
+      .           
+      .             template<bool _IsMove, typename _II, typename _OI>
+      .               _GLIBCXX20_CONSTEXPR
+      .               inline _OI
+      9 ( 0.00%)      __copy_move_a(_II __first, _II __last, _OI __result)
+      .               {
+     20 ( 0.00%)        return std::__niter_wrap(__result,
+261,166 ( 0.05%)  => /usr/include/c++/13/bits/stl_algobase.h:double* std::__copy_move_a1<false, double const*, double*>(double const*, double const*, double*) (1x)
+     36 ( 0.00%)  => /usr/include/c++/13/bits/stl_iterator.h:double const* std::__niter_base<double const*, std::vector<double, std::allocator<double> > >(__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >) (2x)
+      8 ( 0.00%)  => /usr/include/c++/13/bits/stl_algobase.h:double* std::__niter_wrap<double*>(double* const&, double*) (1x)
+      7 ( 0.00%)  => /usr/include/c++/13/bits/stl_algobase.h:double* std::__niter_base<double*>(double*) (1x)
+      .           		std::__copy_move_a1<_IsMove>(std::__niter_base(__first),
+      .           					     std::__niter_base(__last),
+      .           					     std::__niter_base(__result)));
+      5 ( 0.00%)      }
+      .           
+      .             template<bool _IsMove,
+      .           	   typename _Ite, typename _Seq, typename _Cat, typename _OI>
+      .               _OI
+      .               __copy_move_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+      .           		  const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+      .           		  _OI);
+      .           
+-- line 552 ----------------------------------------
+-- line 562 ----------------------------------------
+      .               ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>
+      .               __copy_move_a(const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
+      .           		  const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
+      .           		  const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
+      .           
+      .             template<typename _InputIterator, typename _Size, typename _OutputIterator>
+      .               _GLIBCXX20_CONSTEXPR
+      .               _OutputIterator
+  2,304 ( 0.00%)      __copy_n_a(_InputIterator __first, _Size __n, _OutputIterator __result,
+      .           	       bool)
+      .               {
+    512 ( 0.00%)        if (__n > 0)
+      .           	{
+      .           	  while (true)
+      .           	    {
+458,496 ( 0.08%)  	      *__result = *__first;
+524,288 ( 0.09%)  => /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::operator*() const (65,536x)
+ 65,536 ( 0.01%)  	      ++__result;
+327,680 ( 0.06%)  	      if (--__n > 0)
+195,840 ( 0.04%)  		++__first;
+124,588,838 (22.34%)  => /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::operator++() (65,280x)
+      .           	      else
+    256 ( 0.00%)  		break;
+      .           	    }
+      .           	}
+    256 ( 0.00%)        return __result;
+    512 ( 0.00%)      }
+      .           
+      .           #if _GLIBCXX_HOSTED
+      .             template<typename _CharT, typename _Size>
+      .               typename __gnu_cxx::__enable_if<
+      .                 __is_char<_CharT>::__value, _CharT*>::__type
+      .               __copy_n_a(istreambuf_iterator<_CharT, char_traits<_CharT> >,
+      .           	       _Size, _CharT*, bool);
+      .           
+-- line 594 ----------------------------------------
+-- line 616 ----------------------------------------
+      .              *  [first,last); the copy_backward function should be used instead.
+      .              *
+      .              *  Note that the end of the output range is permitted to be contained
+      .              *  within [first,last).
+      .             */
+      .             template<typename _II, typename _OI>
+      .               _GLIBCXX20_CONSTEXPR
+      .               inline _OI
+      8 ( 0.00%)      copy(_II __first, _II __last, _OI __result)
+      .               {
+      .                 // concept requirements
+      .                 __glibcxx_function_requires(_InputIteratorConcept<_II>)
+      .                 __glibcxx_function_requires(_OutputIteratorConcept<_OI,
+      .           	    typename iterator_traits<_II>::reference>)
+      .                 __glibcxx_requires_can_increment_range(__first, __last, __result);
+      .           
+      .                 return std::__copy_move_a<__is_move_iterator<_II>::__value>
+     13 ( 0.00%)  	     (std::__miter_base(__first), std::__miter_base(__last), __result);
+261,251 ( 0.05%)  => /usr/include/c++/13/bits/stl_algobase.h:double* std::__copy_move_a<false, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, double*>(__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, double*) (1x)
+     14 ( 0.00%)  => /usr/include/c++/13/bits/cpp_type_traits.h:__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > > std::__miter_base<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > > >(__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >) (2x)
+      3 ( 0.00%)      }
+      .           
+      .           #if __cplusplus >= 201103L
+      .             /**
+      .              *  @brief Moves the range [first,last) into result.
+      .              *  @ingroup mutating_algorithms
+      .              *  @param  __first  An input iterator.
+      .              *  @param  __last   An input iterator.
+      .              *  @param  __result An output iterator.
+-- line 642 ----------------------------------------
+-- line 1006 ----------------------------------------
+      .           
+      .                 std::__fill_a(__first, __last, __value);
+      .               }
+      .           
+      .             // Used by fill_n, generate_n, etc. to convert _Size to an integral type:
+      .             inline _GLIBCXX_CONSTEXPR int
+      .             __size_to_integer(int __n) { return __n; }
+      .             inline _GLIBCXX_CONSTEXPR unsigned
+  1,792 ( 0.00%)    __size_to_integer(unsigned __n) { return __n; }
+      .             inline _GLIBCXX_CONSTEXPR long
+      .             __size_to_integer(long __n) { return __n; }
+      .             inline _GLIBCXX_CONSTEXPR unsigned long
+      .             __size_to_integer(unsigned long __n) { return __n; }
+      .             inline _GLIBCXX_CONSTEXPR long long
+      .             __size_to_integer(long long __n) { return __n; }
+      .             inline _GLIBCXX_CONSTEXPR unsigned long long
+      .             __size_to_integer(unsigned long long __n) { return __n; }
+-- line 1022 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/stl_vector.h
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 91 ----------------------------------------
+      .           
+      .                 struct _Vector_impl_data
+      .                 {
+      .           	pointer _M_start;
+      .           	pointer _M_finish;
+      .           	pointer _M_end_of_storage;
+      .           
+      .           	_GLIBCXX20_CONSTEXPR
+     16 ( 0.00%)  	_Vector_impl_data() _GLIBCXX_NOEXCEPT
+     24 ( 0.00%)  	: _M_start(), _M_finish(), _M_end_of_storage()
+     12 ( 0.00%)  	{ }
+      .           
+      .           #if __cplusplus >= 201103L
+      .           	_GLIBCXX20_CONSTEXPR
+      .           	_Vector_impl_data(_Vector_impl_data&& __x) noexcept
+      .           	: _M_start(__x._M_start), _M_finish(__x._M_finish),
+      .           	  _M_end_of_storage(__x._M_end_of_storage)
+      .           	{ __x._M_start = __x._M_finish = __x._M_end_of_storage = pointer(); }
+      .           #endif
+-- line 109 ----------------------------------------
+-- line 125 ----------------------------------------
+      .           	  // information used by TBAA.
+      .           	  _Vector_impl_data __tmp;
+      .           	  __tmp._M_copy_data(*this);
+      .           	  _M_copy_data(__x);
+      .           	  __x._M_copy_data(__tmp);
+      .           	}
+      .                 };
+      .           
+     40 ( 0.00%)        struct _Vector_impl
+      .           	: public _Tp_alloc_type, public _Vector_impl_data
+      .                 {
+      .           	_GLIBCXX20_CONSTEXPR
+     18 ( 0.00%)  	_Vector_impl() _GLIBCXX_NOEXCEPT_IF(
+      .           	    is_nothrow_default_constructible<_Tp_alloc_type>::value)
+      .           #if __cpp_lib_concepts
+      .           	requires is_default_constructible_v<_Tp_alloc_type>
+      .           #endif
+      6 ( 0.00%)  	: _Tp_alloc_type()
+     13 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_Vector_impl_data::_Vector_impl_data() (1x)
+      6 ( 0.00%)  	{ }
+      .           
+      .           	_GLIBCXX20_CONSTEXPR
+     28 ( 0.00%)  	_Vector_impl(_Tp_alloc_type const& __a) _GLIBCXX_NOEXCEPT
+      6 ( 0.00%)  	: _Tp_alloc_type(__a)
+     13 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_Vector_impl_data::_Vector_impl_data() (1x)
+      6 ( 0.00%)  	{ }
+      .           
+      .           #if __cplusplus >= 201103L
+      .           	// Not defaulted, to enforce noexcept(true) even when
+      .           	// !is_nothrow_move_constructible<_Tp_alloc_type>.
+      .           	_GLIBCXX20_CONSTEXPR
+      .           	_Vector_impl(_Vector_impl&& __x) noexcept
+      .           	: _Tp_alloc_type(std::move(__x)), _Vector_impl_data(std::move(__x))
+      .           	{ }
+-- line 156 ----------------------------------------
+-- line 293 ----------------------------------------
+      .           #endif // _GLIBCXX_SANITIZE_STD_ALLOCATOR && _GLIBCXX_SANITIZE_VECTOR
+      .                 };
+      .           
+      .               public:
+      .                 typedef _Alloc allocator_type;
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 _Tp_alloc_type&
+    260 ( 0.00%)        _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+    195 ( 0.00%)        { return this->_M_impl; }
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 const _Tp_alloc_type&
+    208 ( 0.00%)        _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+    156 ( 0.00%)        { return this->_M_impl; }
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 allocator_type
+      .                 get_allocator() const _GLIBCXX_NOEXCEPT
+      .                 { return allocator_type(_M_get_Tp_allocator()); }
+      .           
+      .           #if __cplusplus >= 201103L
+     22 ( 0.00%)        _Vector_base() = default;
+     30 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl() (1x)
+      .           #else
+      .                 _Vector_base() { }
+      .           #endif
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 _Vector_base(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+      .                 : _M_impl(__a) { }
+      .           
+-- line 323 ----------------------------------------
+-- line 325 ----------------------------------------
+      .           #if !_GLIBCXX_INLINE_VERSION
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 _Vector_base(size_t __n)
+      .                 : _M_impl()
+      .                 { _M_create_storage(__n); }
+      .           #endif
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+     16 ( 0.00%)        _Vector_base(size_t __n, const allocator_type& __a)
+     10 ( 0.00%)        : _M_impl(__a)
+     35 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_Vector_impl::_Vector_impl(std::allocator<Vector> const&) (1x)
+     18 ( 0.00%)        { _M_create_storage(__n); }
+    628 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_M_create_storage(unsigned long) (1x)
+      .           
+      .           #if __cplusplus >= 201103L
+      .                 _Vector_base(_Vector_base&&) = default;
+      .           
+      .                 // Kept for ABI compatibility.
+      .           # if !_GLIBCXX_INLINE_VERSION
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 _Vector_base(_Tp_alloc_type&& __a) noexcept
+-- line 343 ----------------------------------------
+-- line 359 ----------------------------------------
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 _Vector_base(const allocator_type& __a, _Vector_base&& __x)
+      .                 : _M_impl(_Tp_alloc_type(__a), std::move(__x._M_impl))
+      .                 { }
+      .           #endif
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+     20 ( 0.00%)        ~_Vector_base() _GLIBCXX_NOEXCEPT
+      .                 {
+     28 ( 0.00%)  	_M_deallocate(_M_impl._M_start,
+    244 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<double, std::allocator<double> >::_M_deallocate(double*, unsigned long) (2x)
+     28 ( 0.00%)  		      _M_impl._M_end_of_storage - _M_impl._M_start);
+     24 ( 0.00%)        }
+     42 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl() (2x)
+      .           
+      .               public:
+      .                 _Vector_impl _M_impl;
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 pointer
+    162 ( 0.00%)        _M_allocate(size_t __n)
+      .                 {
+      .           	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+    162 ( 0.00%)  	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
+     54 ( 0.00%)        }
+      .           
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 void
+    203 ( 0.00%)        _M_deallocate(pointer __p, size_t __n)
+      .                 {
+      .           	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
+     58 ( 0.00%)  	if (__p)
+    162 ( 0.00%)  	  _Tr::deallocate(_M_impl, __p, __n);
+     87 ( 0.00%)        }
+      .           
+      .               protected:
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 void
+     12 ( 0.00%)        _M_create_storage(size_t __n)
+      .                 {
+     14 ( 0.00%)  	this->_M_impl._M_start = this->_M_allocate(__n);
+    601 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_M_allocate(unsigned long) (1x)
+      8 ( 0.00%)  	this->_M_impl._M_finish = this->_M_impl._M_start;
+     14 ( 0.00%)  	this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;
+      6 ( 0.00%)        }
+      .               };
+      .           
+      .             /**
+      .              *  @brief A standard container which offers fixed time access to
+      .              *  individual elements in any order.
+      .              *
+      .              *  @ingroup sequences
+      .              *  @headerfile vector
+-- line 409 ----------------------------------------
+-- line 496 ----------------------------------------
+      .                 }
+      .           
+      .                 static pointer
+      .                 _S_do_relocate(pointer, pointer, pointer __result,
+      .           		     _Tp_alloc_type&, false_type) noexcept
+      .                 { return __result; }
+      .           
+      .                 static _GLIBCXX20_CONSTEXPR pointer
+    256 ( 0.00%)        _S_relocate(pointer __first, pointer __last, pointer __result,
+      .           		  _Tp_alloc_type& __alloc) noexcept
+      .                 {
+      .           #if __cpp_if_constexpr
+      .           	// All callers have already checked _S_use_relocate() so just do it.
+    192 ( 0.00%)  	return std::__relocate_a(__first, __last, __result, __alloc);
+249,926 ( 0.04%)  => /usr/include/c++/13/bits/stl_uninitialized.h:double* std::__relocate_a<double*, double*, std::allocator<double> >(double*, double*, double*, std::allocator<double>&) (32x)
+      .           #else
+      .           	using __do_it = __bool_constant<_S_use_relocate()>;
+      .           	return _S_do_relocate(__first, __last, __result, __alloc, __do_it{});
+      .           #endif
+     64 ( 0.00%)        }
+      .           #endif // C++11
+      .           
+      .               protected:
+      .                 using _Base::_M_allocate;
+      .                 using _Base::_M_deallocate;
+      .                 using _Base::_M_impl;
+      .                 using _Base::_M_get_Tp_allocator;
+      .           
+-- line 522 ----------------------------------------
+-- line 523 ----------------------------------------
+      .               public:
+      .                 // [23.2.4.1] construct/copy/destroy
+      .                 // (assign() and get_allocator() are also listed in this section)
+      .           
+      .                 /**
+      .                  *  @brief  Creates a %vector with no elements.
+      .                  */
+      .           #if __cplusplus >= 201103L
+     22 ( 0.00%)        vector() = default;
+     41 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_Vector_base() (1x)
+      .           #else
+      .                 vector() { }
+      .           #endif
+      .           
+      .                 /**
+      .                  *  @brief  Creates a %vector with no elements.
+      .                  *  @param  __a  An allocator object.
+      .                  */
+-- line 539 ----------------------------------------
+-- line 593 ----------------------------------------
+      .                  *  All the elements of @a __x are copied, but any unused capacity in
+      .                  *  @a __x  will not be copied
+      .                  *  (i.e. capacity() == size() in the new %vector).
+      .                  *
+      .                  *  The newly-created %vector uses a copy of the allocator object used
+      .                  *  by @a __x (unless the allocator traits dictate a different object).
+      .                  */
+      .                 _GLIBCXX20_CONSTEXPR
+     24 ( 0.00%)        vector(const vector& __x)
+      .                 : _Base(__x.size(),
+     48 ( 0.00%)  	_Alloc_traits::_S_select_on_copy(__x._M_get_Tp_allocator()))
+    685 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_Vector_base(unsigned long, std::allocator<Vector> const&) (1x)
+     13 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::size() const (1x)
+      7 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_M_get_Tp_allocator() const (1x)
+      .                 {
+      4 ( 0.00%)  	this->_M_impl._M_finish =
+     28 ( 0.00%)  	  std::__uninitialized_copy_a(__x.begin(), __x.end(),
+1,407,580 ( 0.25%)  => /usr/include/c++/13/bits/stl_uninitialized.h:Vector* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<Vector const*, std::vector<Vector, std::allocator<Vector> > >, Vector*, Vector>(__gnu_cxx::__normal_iterator<Vector const*, std::vector<Vector, std::allocator<Vector> > >, __gnu_cxx::__normal_iterator<Vector const*, std::vector<Vector, std::allocator<Vector> > >, Vector*, std::allocator<Vector>&) (1x)
+     32 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::end() const (1x)
+     31 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::begin() const (1x)
+      .           				      this->_M_impl._M_start,
+      8 ( 0.00%)  				      _M_get_Tp_allocator());
+      7 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_M_get_Tp_allocator() (1x)
+     20 ( 0.00%)        }
+      .           
+      .           #if __cplusplus >= 201103L
+      .                 /**
+      .                  *  @brief  %Vector move constructor.
+      .                  *
+      .                  *  The newly-created %vector contains the exact contents of the
+      .                  *  moved instance.
+      .                  *  The contents of the moved instance are a valid, but unspecified
+-- line 617 ----------------------------------------
+-- line 725 ----------------------------------------
+      .           
+      .                 /**
+      .                  *  The dtor only erases the elements, and note that if the
+      .                  *  elements themselves are pointers, the pointed-to memory is
+      .                  *  not touched in any way.  Managing the pointer is the user's
+      .                  *  responsibility.
+      .                  */
+      .                 _GLIBCXX20_CONSTEXPR
+     20 ( 0.00%)        ~vector() _GLIBCXX_NOEXCEPT
+      .                 {
+     28 ( 0.00%)  	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+     12 ( 0.00%)  		      _M_get_Tp_allocator());
+     14 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator() (2x)
+      .           	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
+     24 ( 0.00%)        }
+    336 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<double, std::allocator<double> >::~_Vector_base() (2x)
+      .           
+      .                 /**
+      .                  *  @brief  %Vector assignment operator.
+      .                  *  @param  __x  A %vector of identical element and allocator types.
+      .                  *
+      .                  *  All the elements of @a __x are copied, but any unused capacity in
+      .                  *  @a __x will not be copied.
+      .                  *
+-- line 746 ----------------------------------------
+-- line 865 ----------------------------------------
+      .                 // iterators
+      .                 /**
+      .                  *  Returns a read/write iterator that points to the first
+      .                  *  element in the %vector.  Iteration is done in ordinary
+      .                  *  element order.
+      .                  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 iterator
+    200 ( 0.00%)        begin() _GLIBCXX_NOEXCEPT
+    275 ( 0.00%)        { return iterator(this->_M_impl._M_start); }
+    108 ( 0.00%)  => /usr/include/c++/13/bits/stl_iterator.h:__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >::__normal_iterator(Vector* const&) (9x)
+      .           
+      .                 /**
+      .                  *  Returns a read-only (constant) iterator that points to the
+      .                  *  first element in the %vector.  Iteration is done in ordinary
+      .                  *  element order.
+      .                  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 const_iterator
+     16 ( 0.00%)        begin() const _GLIBCXX_NOEXCEPT
+     22 ( 0.00%)        { return const_iterator(this->_M_impl._M_start); }
+     12 ( 0.00%)  => /usr/include/c++/13/bits/stl_iterator.h:__gnu_cxx::__normal_iterator<Vector const*, std::vector<Vector, std::allocator<Vector> > >::__normal_iterator(Vector const* const&) (1x)
+      .           
+      .                 /**
+      .                  *  Returns a read/write iterator that points one past the last
+      .                  *  element in the %vector.  Iteration is done in ordinary
+      .                  *  element order.
+      .                  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 iterator
+    200 ( 0.00%)        end() _GLIBCXX_NOEXCEPT
+    300 ( 0.00%)        { return iterator(this->_M_impl._M_finish); }
+    108 ( 0.00%)  => /usr/include/c++/13/bits/stl_iterator.h:__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >::__normal_iterator(Vector* const&) (9x)
+      .           
+      .                 /**
+      .                  *  Returns a read-only (constant) iterator that points one past
+      .                  *  the last element in the %vector.  Iteration is done in
+      .                  *  ordinary element order.
+      .                  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 const_iterator
+     16 ( 0.00%)        end() const _GLIBCXX_NOEXCEPT
+     24 ( 0.00%)        { return const_iterator(this->_M_impl._M_finish); }
+     12 ( 0.00%)  => /usr/include/c++/13/bits/stl_iterator.h:__gnu_cxx::__normal_iterator<Vector const*, std::vector<Vector, std::allocator<Vector> > >::__normal_iterator(Vector const* const&) (1x)
+      .           
+      .                 /**
+      .                  *  Returns a read/write reverse iterator that points to the
+      .                  *  last element in the %vector.  Iteration is done in reverse
+      .                  *  element order.
+      .                  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 reverse_iterator
+-- line 912 ----------------------------------------
+-- line 984 ----------------------------------------
+      .                 crend() const noexcept
+      .                 { return const_reverse_iterator(begin()); }
+      .           #endif
+      .           
+      .                 // [23.2.4.2] capacity
+      .                 /**  Returns the number of elements in the %vector.  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 size_type
+263,576 ( 0.05%)        size() const _GLIBCXX_NOEXCEPT
+593,046 ( 0.11%)        { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+      .           
+      .                 /**  Returns the size() of the largest possible %vector.  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 size_type
+    250 ( 0.00%)        max_size() const _GLIBCXX_NOEXCEPT
+    350 ( 0.00%)        { return _S_max_size(_M_get_Tp_allocator()); }
+    810 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::_S_max_size(std::allocator<Vector> const&) (18x)
+    126 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::_Vector_base<Vector, std::allocator<Vector> >::_M_get_Tp_allocator() const (18x)
+      .           
+      .           #if __cplusplus >= 201103L
+      .                 /**
+      .                  *  @brief  Resizes the %vector to the specified number of elements.
+      .                  *  @param  __new_size  Number of elements the %vector should contain.
+      .                  *
+      .                  *  This function will %resize the %vector to the specified
+      .                  *  number of elements.  If the number is smaller than the
+-- line 1007 ----------------------------------------
+-- line 1118 ----------------------------------------
+      .                  *
+      .                  *  This operator allows for easy, array-style, data access.
+      .                  *  Note that data access with this operator is unchecked and
+      .                  *  out_of_range lookups are not defined. (For checked lookups
+      .                  *  see at().)
+      .                  */
+      .                 _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
+      .                 reference
+489,600 ( 0.09%)        operator[](size_type __n) _GLIBCXX_NOEXCEPT
+      .                 {
+      .           	__glibcxx_requires_subscript(__n);
+489,600 ( 0.09%)  	return *(this->_M_impl._M_start + __n);
+195,840 ( 0.04%)        }
+      .           
+      .                 /**
+      .                  *  @brief  Subscript access to the data contained in the %vector.
+      .                  *  @param __n The index of the element for which data should be
+      .                  *  accessed.
+      .                  *  @return  Read-only (constant) reference to data.
+      .                  *
+      .                  *  This operator allows for easy, array-style, data access.
+-- line 1138 ----------------------------------------
+-- line 1273 ----------------------------------------
+      .                  *  This is a typical stack operation.  The function creates an
+      .                  *  element at the end of the %vector and assigns the given data
+      .                  *  to it.  Due to the nature of a %vector this operation can be
+      .                  *  done in constant time if the %vector has preallocated space
+      .                  *  available.
+      .                  */
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 void
+231,040 ( 0.04%)        push_back(const value_type& __x)
+      .                 {
+197,376 ( 0.04%)  	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
+      .           	  {
+      .           	    _GLIBCXX_ASAN_ANNOTATE_GROW(1);
+230,097 ( 0.04%)  	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
+      .           				     __x);
+164,355 ( 0.03%)  	    ++this->_M_impl._M_finish;
+      .           	    _GLIBCXX_ASAN_ANNOTATE_GREW(1);
+      .           	  }
+      .           	else
+    225 ( 0.00%)  	  _M_realloc_insert(end(), __x);
+1,511,960 ( 0.27%)  => /usr/include/c++/13/bits/vector.tcc:void std::vector<Vector, std::allocator<Vector> >::_M_realloc_insert<Vector const&>(__gnu_cxx::__normal_iterator<Vector*, std::vector<Vector, std::allocator<Vector> > >, Vector const&) (9x)
+    288 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::end() (9x)
+165,479 ( 0.03%)        }
+      .           
+      .           #if __cplusplus >= 201103L
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 void
+      .                 push_back(value_type&& __x)
+      .                 { emplace_back(std::move(__x)); }
+      .           
+      .                 template<typename... _Args>
+-- line 1301 ----------------------------------------
+-- line 1888 ----------------------------------------
+      .                 iterator
+      .                 _M_emplace_aux(const_iterator __position, value_type&& __v)
+      .                 { return _M_insert_rval(__position, std::move(__v)); }
+      .           #endif
+      .           
+      .                 // Called by _M_fill_insert, _M_insert_aux etc.
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 size_type
+    275 ( 0.00%)        _M_check_len(size_type __n, const char* __s) const
+      .                 {
+    350 ( 0.00%)  	if (max_size() - size() < __n)
+    576 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::max_size() const (9x)
+    117 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::size() const (9x)
+      .           	  __throw_length_error(__N(__s));
+      .           
+    400 ( 0.00%)  	const size_type __len = size() + (std::max)(size(), __n);
+    234 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::size() const (18x)
+    127 ( 0.00%)  => /usr/include/c++/13/bits/stl_algobase.h:unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) (9x)
+    275 ( 0.00%)  	return (__len < size() || __len > max_size()) ? max_size() : __len;
+    576 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::max_size() const (9x)
+    117 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::size() const (9x)
+    150 ( 0.00%)        }
+      .           
+      .                 // Called by constructors to check initial size.
+      .                 static _GLIBCXX20_CONSTEXPR size_type
+      .                 _S_check_init_len(size_type __n, const allocator_type& __a)
+      .                 {
+      .           	if (__n > _S_max_size(_Tp_alloc_type(__a)))
+      .           	  __throw_length_error(
+      .           	      __N("cannot create std::vector larger than max_size()"));
+      .           	return __n;
+      .                 }
+      .           
+      .                 static _GLIBCXX20_CONSTEXPR size_type
+    400 ( 0.00%)        _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
+      .                 {
+      .           	// std::distance(begin(), end()) cannot be greater than PTRDIFF_MAX,
+      .           	// and realistically we can't store more than PTRDIFF_MAX/sizeof(T)
+      .           	// (even if std::allocator_traits::max_size says we can).
+    400 ( 0.00%)  	const size_t __diffmax
+      .           	  = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);
+     50 ( 0.00%)  	const size_t __allocmax = _Alloc_traits::max_size(__a);
+    300 ( 0.00%)  	return (std::min)(__diffmax, __allocmax);
+    448 ( 0.00%)  => /usr/include/c++/13/bits/stl_algobase.h:unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) (32x)
+    250 ( 0.00%)        }
+      .           
+      .                 // Internal erase functions follow.
+      .           
+      .                 // Called by erase(q1,q2), clear(), resize(), _M_fill_assign,
+      .                 // _M_assign_aux.
+      .                 _GLIBCXX20_CONSTEXPR
+      .                 void
+      .                 _M_erase_at_end(pointer __pos) _GLIBCXX_NOEXCEPT
+-- line 1933 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: vector.cpp
+--------------------------------------------------------------------------------
+Ir                 
+
+-- line 7 ----------------------------------------
+        .           #include <cmath>
+        .           #include <vector>
+        .           
+        .           Vector::Vector()
+        .               : size{0}, data{nullptr}
+        .           {
+        .           }
+        .           
+    5,115 ( 0.00%)  Vector::~Vector()
+        .           {
+    4,092 ( 0.00%)      if (data)
+        .               {
+    8,184 ( 0.00%)          delete[] data;
+  223,381 ( 0.04%)  => ???:0x000000000010a540 (1,023x)
+        .               }
+        .           
+    2,046 ( 0.00%)      size = 0;
+    3,069 ( 0.00%)  }
+        .           
+    6,138 ( 0.00%)  Vector::Vector(unsigned size)
+   14,322 ( 0.00%)      : size{size}, data{new double[size]}
+  271,819 ( 0.05%)  => ???:0x000000000010a330 (1,023x)
+        .           {
+    3,069 ( 0.00%)  }
+        .           
+        .           Vector::Vector(unsigned size, double *data)
+        .               : size{size}, data{data}
+        .           {
+        .           }
+        .           
+    4,602 ( 0.00%)  Vector::Vector(const Vector &other)
+    4,602 ( 0.00%)      : Vector{other.size}
+  222,854 ( 0.04%)  => vector.cpp:Vector::Vector(unsigned int) (767x)
+        .           {
+1,183,481 ( 0.21%)      for (auto i{0}; i < size; i++)
+        .               {
+2,748,928 ( 0.49%)          data[i] = other.data[i];
+        .               }
+    3,068 ( 0.00%)  }
+        .           
+        .           unsigned Vector::get_size() const
+  130,560 ( 0.02%)  {
+   65,280 ( 0.01%)      return size;
+   65,280 ( 0.01%)  }
+        .           
+        .           double *Vector::get_data()
+    1,024 ( 0.00%)  {
+      512 ( 0.00%)      return data;
+      512 ( 0.00%)  }
+        .           
+        .           const double *Vector::get_data() const
+  261,120 ( 0.05%)  {
+  130,560 ( 0.02%)      return data;
+  130,560 ( 0.02%)  }
+        .           
+        .           double Vector::operator[](unsigned i) const
+        .           {
+        .               return data[i];
+        .           }
+        .           
+        .           double &Vector::operator[](unsigned i)
+        .           {
+-- line 65 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/alloc_traits.h
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 474 ----------------------------------------
+      .                  *  @param  __a  An allocator.
+      .                  *  @param  __n  The number of objects to allocate space for.
+      .                  *
+      .                  *  Calls @c a.allocate(n)
+      .                 */
+      .                 [[__nodiscard__,__gnu__::__always_inline__]]
+      .                 static _GLIBCXX20_CONSTEXPR pointer
+      .                 allocate(allocator_type& __a, size_type __n)
+    216 ( 0.00%)        { return __a.allocate(__n); }
+  3,223 ( 0.00%)  => /usr/include/c++/13/bits/new_allocator.h:std::__new_allocator<Vector>::allocate(unsigned long, void const*) (10x)
+      .           
+      .                 /**
+      .                  *  @brief  Allocate memory.
+      .                  *  @param  __a  An allocator.
+      .                  *  @param  __n  The number of objects to allocate space for.
+      .                  *  @param  __hint Aid to locality.
+      .                  *  @return Memory of suitable size and alignment for @a n objects
+      .                  *          of type @c value_type
+-- line 490 ----------------------------------------
+-- line 509 ----------------------------------------
+      .                  *  @param  __p  Pointer to the memory to deallocate.
+      .                  *  @param  __n  The number of objects space was allocated for.
+      .                  *
+      .                  *  Calls <tt> a.deallocate(p, n) </tt>
+      .                 */
+      .                 [[__gnu__::__always_inline__]]
+      .                 static _GLIBCXX20_CONSTEXPR void
+      .                 deallocate(allocator_type& __a, pointer __p, size_type __n)
+    189 ( 0.00%)        { __a.deallocate(__p, __n); }
+  1,634 ( 0.00%)  => /usr/include/c++/13/bits/new_allocator.h:std::__new_allocator<Vector>::deallocate(Vector*, unsigned long) (10x)
+      .           
+      .                 /**
+      .                  *  @brief  Construct an object of type `_Up`
+      .                  *  @param  __a  An allocator.
+      .                  *  @param  __p  Pointer to memory of suitable size and alignment for
+      .                  *	       an object of type `_Up`.
+      .                  *  @param  __args Constructor arguments.
+      .                  *
+-- line 525 ----------------------------------------
+-- line 530 ----------------------------------------
+      .                 template<typename _Up, typename... _Args>
+      .           	[[__gnu__::__always_inline__]]
+      .           	static _GLIBCXX20_CONSTEXPR void
+      .           	construct(allocator_type& __a __attribute__((__unused__)), _Up* __p,
+      .           		  _Args&&... __args)
+      .           	noexcept(std::is_nothrow_constructible<_Up, _Args...>::value)
+      .           	{
+      .           #if __cplusplus <= 201703L
+263,168 ( 0.05%)  	  __a.construct(__p, std::forward<_Args>(__args)...);
+  1,729 ( 0.00%)  => /usr/include/c++/13/bits/move.h:Vector const& std::forward<Vector const&>(std::remove_reference<Vector const&>::type&) (247x)
+      .           #else
+      .           	  std::construct_at(__p, std::forward<_Args>(__args)...);
+      .           #endif
+ 32,896 ( 0.01%)  	}
+      .           
+      .                 /**
+      .                  *  @brief  Destroy an object of type @a _Up
+      .                  *  @param  __a  An allocator.
+      .                  *  @param  __p  Pointer to the object to destroy
+      .                  *
+      .                  *  Calls @c __a.destroy(__p).
+      .                 */
+-- line 550 ----------------------------------------
+-- line 566 ----------------------------------------
+      .                  *  @param  __a  An allocator.
+      .                  *  @return @c __a.max_size()
+      .                 */
+      .                 [[__gnu__::__always_inline__]]
+      .                 static _GLIBCXX20_CONSTEXPR size_type
+      .                 max_size(const allocator_type& __a __attribute__((__unused__))) noexcept
+      .                 {
+      .           #if __cplusplus <= 201703L
+     50 ( 0.00%)  	return __a.max_size();
+      .           #else
+      .           	return size_t(-1) / sizeof(value_type);
+      .           #endif
+      .                 }
+      .           
+      .                 /**
+      .                  *  @brief  Obtain an allocator to use when copying a container.
+      .                  *  @param  __rhs  An allocator.
+      .                  *  @return @c __rhs
+      .                 */
+      .                 [[__gnu__::__always_inline__]]
+      .                 static _GLIBCXX20_CONSTEXPR allocator_type
+      .                 select_on_container_copy_construction(const allocator_type& __rhs)
+      2 ( 0.00%)        { return __rhs; }
+      .               };
+      .           
+      .             /// Explicit specialization for std::allocator<void>.
+      .             template<>
+      .               struct allocator_traits<allocator<void>>
+      .               {
+      .                 /// The allocator type
+      .                 using allocator_type = allocator<void>;
+-- line 596 ----------------------------------------
+-- line 940 ----------------------------------------
+      .           
+      .           #if _GLIBCXX_HOSTED
+      .             template<typename _ForwardIterator, typename _Tp>
+      .               __attribute__((__always_inline__)) _GLIBCXX20_CONSTEXPR
+      .               inline void
+      .               _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+      .           	     allocator<_Tp>&)
+      .               {
+     65 ( 0.00%)        std::_Destroy(__first, __last);
+     44 ( 0.00%)  => /usr/include/c++/13/bits/stl_construct.h:void std::_Destroy<double*>(double*, double*) (2x)
+     13 ( 0.00%)      }
+      .           #endif
+      .             /// @endcond
+      .           
+      .           _GLIBCXX_END_NAMESPACE_VERSION
+      .           } // namespace std
+      .           #endif // _ALLOC_TRAITS_H
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/stream_iterator.h
+--------------------------------------------------------------------------------
+Ir                 
+
+-- line 71 ----------------------------------------
+        .           
+        .               public:
+        .                 ///  Construct end of input stream iterator.
+        .                 _GLIBCXX_CONSTEXPR istream_iterator()
+        .                 _GLIBCXX_NOEXCEPT_IF(is_nothrow_default_constructible<_Tp>::value)
+        .                 : _M_stream(0), _M_value(), _M_ok(false) {}
+        .           
+        .                 ///  Construct start of input stream iterator.
+    1,536 ( 0.00%)        istream_iterator(istream_type& __s)
+    1,792 ( 0.00%)        : _M_stream(std::__addressof(__s)), _M_ok(true)
+    1,792 ( 0.00%)  => /usr/include/c++/13/bits/move.h:std::istream* std::__addressof<std::istream>(std::istream&) (256x)
+    1,536 ( 0.00%)        { _M_read(); }
+  491,574 ( 0.09%)  => /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::_M_read() (256x)
+        .           
+        .                 _GLIBCXX_CONSTEXPR
+    2,560 ( 0.00%)        istream_iterator(const istream_iterator& __obj)
+        .                 _GLIBCXX_NOEXCEPT_IF(is_nothrow_copy_constructible<_Tp>::value)
+    4,096 ( 0.00%)        : _M_stream(__obj._M_stream), _M_value(__obj._M_value),
+    2,048 ( 0.00%)          _M_ok(__obj._M_ok)
+    1,536 ( 0.00%)        { }
+        .           
+        .           #if __cplusplus > 201703L && __cpp_lib_concepts
+        .                 constexpr
+        .                 istream_iterator(default_sentinel_t)
+        .                 noexcept(is_nothrow_default_constructible_v<_Tp>)
+        .                 : istream_iterator() { }
+        .           #endif
+        .           
+        .           #if __cplusplus >= 201103L
+        .                 istream_iterator& operator=(const istream_iterator&) = default;
+        .                 ~istream_iterator() = default;
+        .           #endif
+        .           
+        .                 _GLIBCXX_NODISCARD
+        .                 const _Tp&
+  262,144 ( 0.05%)        operator*() const _GLIBCXX_NOEXCEPT
+        .                 {
+        .           	__glibcxx_requires_cond(_M_ok,
+        .           				_M_message(__gnu_debug::__msg_deref_istream)
+        .           				._M_iterator(*this));
+  131,072 ( 0.02%)  	return _M_value;
+  131,072 ( 0.02%)        }
+        .           
+        .                 _GLIBCXX_NODISCARD
+        .                 const _Tp*
+        .                 operator->() const _GLIBCXX_NOEXCEPT
+        .                 { return std::__addressof((operator*())); }
+        .           
+        .                 istream_iterator&
+  326,400 ( 0.06%)        operator++()
+        .                 {
+        .           	__glibcxx_requires_cond(_M_ok,
+        .           				_M_message(__gnu_debug::__msg_inc_istream)
+        .           				._M_iterator(*this));
+  195,840 ( 0.04%)  	_M_read();
+123,870,758 (22.21%)  => /usr/include/c++/13/bits/stream_iterator.h:std::istream_iterator<double, char, std::char_traits<char>, long>::_M_read() (65,280x)
+   65,280 ( 0.01%)  	return *this;
+  130,560 ( 0.02%)        }
+        .           
+        .                 istream_iterator
+        .                 operator++(int)
+        .                 {
+        .           	__glibcxx_requires_cond(_M_ok,
+        .           				_M_message(__gnu_debug::__msg_inc_istream)
+        .           				._M_iterator(*this));
+        .           	istream_iterator __tmp = *this;
+-- line 133 ----------------------------------------
+-- line 140 ----------------------------------------
+        .                 _M_equal(const istream_iterator& __x) const _GLIBCXX_NOEXCEPT
+        .                 {
+        .           	// Ideally this would just return _M_stream == __x._M_stream,
+        .           	// but code compiled with old versions never sets _M_stream to null.
+        .           	return (_M_ok == __x._M_ok) && (!_M_ok || _M_stream == __x._M_stream);
+        .                 }
+        .           
+        .                 void
+  327,680 ( 0.06%)        _M_read()
+        .                 {
+1,441,792 ( 0.26%)          if (_M_stream && !(*_M_stream >> _M_value))
+122,003,036 (21.88%)  => ???:0x000000000010a440 (65,536x)
+  393,216 ( 0.07%)  => ???:0x000000000010a3a0 (65,536x)
+        .                     {
+        .                       _M_stream = 0;
+        .                       _M_ok = false;
+        .                     }
+  196,608 ( 0.04%)        }
+        .           
+        .                 /// Return true if the iterators refer to the same stream,
+        .                 /// or are both at end-of-stream.
+        .                 _GLIBCXX_NODISCARD
+        .                 friend bool
+        .                 operator==(const istream_iterator& __x, const istream_iterator& __y)
+        .                 _GLIBCXX_NOEXCEPT
+        .                 { return __x._M_equal(__y); }
+-- line 163 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/bits/new_allocator.h
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 80 ----------------------------------------
+      .           #if __cplusplus >= 201103L
+      .                 // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      .                 // 2103. propagate_on_container_move_assignment
+      .                 typedef std::true_type propagate_on_container_move_assignment;
+      .           #endif
+      .           
+      .                 __attribute__((__always_inline__))
+      .                 _GLIBCXX20_CONSTEXPR
+      4 ( 0.00%)        __new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      .           
+      .                 __attribute__((__always_inline__))
+      .                 _GLIBCXX20_CONSTEXPR
+      4 ( 0.00%)        __new_allocator(const __new_allocator&) _GLIBCXX_USE_NOEXCEPT { }
+      .           
+      .                 template<typename _Tp1>
+      .           	__attribute__((__always_inline__))
+      .           	_GLIBCXX20_CONSTEXPR
+      .           	__new_allocator(const __new_allocator<_Tp1>&) _GLIBCXX_USE_NOEXCEPT { }
+      .           
+      .           #if __cplusplus >= 201103L
+      .                 __new_allocator& operator=(const __new_allocator&) = default;
+      .           #endif
+      .           
+      .           #if __cplusplus <= 201703L
+     56 ( 0.00%)        ~__new_allocator() _GLIBCXX_USE_NOEXCEPT { }
+      .           
+      .                 pointer
+      .                 address(reference __x) const _GLIBCXX_NOEXCEPT
+      .                 { return std::__addressof(__x); }
+      .           
+      .                 const_pointer
+      .                 address(const_reference __x) const _GLIBCXX_NOEXCEPT
+      .                 { return std::__addressof(__x); }
+-- line 112 ----------------------------------------
+-- line 118 ----------------------------------------
+      .           #else
+      .           # define _GLIBCXX_OPERATOR_NEW ::operator new
+      .           # define _GLIBCXX_OPERATOR_DELETE ::operator delete
+      .           #endif
+      .           
+      .                 // NB: __n is permitted to be 0.  The C++ standard says nothing
+      .                 // about what the return value is when __n == 0.
+      .                 _GLIBCXX_NODISCARD _Tp*
+    243 ( 0.00%)        allocate(size_type __n, const void* = static_cast<const void*>(0))
+      .                 {
+      .           #if __cplusplus >= 201103L
+      .           	// _GLIBCXX_RESOLVE_LIB_DEFECTS
+      .           	// 3308. std::allocator<void>().allocate(n)
+      .           	static_assert(sizeof(_Tp) != 0, "cannot allocate incomplete types");
+      .           #endif
+      .           
+    189 ( 0.00%)  	if (__builtin_expect(__n > this->_M_max_size(), false))
+      .           	  {
+      .           	    // _GLIBCXX_RESOLVE_LIB_DEFECTS
+      .           	    // 3190. allocator::allocate sometimes returns too little storage
+      .           	    if (__n > (std::size_t(-1) / sizeof(_Tp)))
+      .           	      std::__throw_bad_array_new_length();
+      .           	    std::__throw_bad_alloc();
+      .           	  }
+      .           
+-- line 142 ----------------------------------------
+-- line 143 ----------------------------------------
+      .           #if __cpp_aligned_new
+      .           	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+      .           	  {
+      .           	    std::align_val_t __al = std::align_val_t(alignof(_Tp));
+      .           	    return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp),
+      .           							   __al));
+      .           	  }
+      .           #endif
+    135 ( 0.00%)  	return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+  4,064 ( 0.00%)  => ???:0x000000000010a490 (17x)
+     54 ( 0.00%)        }
+      .           
+      .                 // __p is not permitted to be a null pointer.
+      .                 void
+    189 ( 0.00%)        deallocate(_Tp* __p, size_type __n __attribute__ ((__unused__)))
+      .                 {
+      .           #if __cpp_sized_deallocation
+      .           # define _GLIBCXX_SIZED_DEALLOC(p, n) (p), (n) * sizeof(_Tp)
+      .           #else
+      .           # define _GLIBCXX_SIZED_DEALLOC(p, n) (p)
+      .           #endif
+      .           
+      .           #if __cpp_aligned_new
+      .           	if (alignof(_Tp) > __STDCPP_DEFAULT_NEW_ALIGNMENT__)
+      .           	  {
+      .           	    _GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n),
+      .           				     std::align_val_t(alignof(_Tp)));
+      .           	    return;
+      .           	  }
+      .           #endif
+    172 ( 0.00%)  	_GLIBCXX_OPERATOR_DELETE(_GLIBCXX_SIZED_DEALLOC(__p, __n));
+  2,601 ( 0.00%)  => ???:0x000000000010a4a0 (17x)
+     54 ( 0.00%)        }
+      .           
+      .           #undef _GLIBCXX_SIZED_DEALLOC
+      .           #undef _GLIBCXX_OPERATOR_DELETE
+      .           #undef _GLIBCXX_OPERATOR_NEW
+      .           
+      .           #if __cplusplus <= 201703L
+      .                 __attribute__((__always_inline__))
+      .                 size_type
+      .                 max_size() const _GLIBCXX_USE_NOEXCEPT
+     50 ( 0.00%)        { return _M_max_size(); }
+      .           
+      .           #if __cplusplus >= 201103L
+      .                 template<typename _Up, typename... _Args>
+      .           	__attribute__((__always_inline__))
+      .           	void
+      .           	construct(_Up* __p, _Args&&... __args)
+      .           	noexcept(std::is_nothrow_constructible<_Up, _Args...>::value)
+362,368 ( 0.06%)  	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+1,374,344 ( 0.25%)  => /home/zxn1225/Desktop/performance_opti/pearson_op2/vector.cpp:Vector::Vector(Vector const&) (247x)
+  1,976 ( 0.00%)  => /usr/include/c++/13/new:operator new(unsigned long, void*) (247x)
+  1,729 ( 0.00%)  => /usr/include/c++/13/bits/move.h:Vector const& std::forward<Vector const&>(std::remove_reference<Vector const&>::type&) (247x)
+      .           
+      .                 template<typename _Up>
+      .           	__attribute__((__always_inline__))
+      .           	void
+      .           	destroy(_Up* __p)
+      .           	noexcept(std::is_nothrow_destructible<_Up>::value)
+      .           	{ __p->~_Up(); }
+      .           #else
+-- line 199 ----------------------------------------
+-- line 225 ----------------------------------------
+      .           #endif
+      .           
+      .               private:
+      .                 __attribute__((__always_inline__))
+      .                 _GLIBCXX_CONSTEXPR size_type
+      .                 _M_max_size() const _GLIBCXX_USE_NOEXCEPT
+      .                 {
+      .           #if __PTRDIFF_MAX__ < __SIZE_MAX__
+     77 ( 0.00%)  	return std::size_t(__PTRDIFF_MAX__) / sizeof(_Tp);
+      .           #else
+      .           	return std::size_t(-1) / sizeof(_Tp);
+      .           #endif
+      .                 }
+      .               };
+      .           
+      .           _GLIBCXX_END_NAMESPACE_VERSION
+      .           } // namespace
+-- line 241 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/13/iomanip
+--------------------------------------------------------------------------------
+Ir               
+
+-- line 190 ----------------------------------------
+      .              *  @brief  Manipulator for @c precision.
+      .              *  @param  __n  The new precision.
+      .              *
+      .              *  Sent to a stream object, this manipulator calls @c precision(__n) for
+      .              *  that object.
+      .             */
+      .             inline _Setprecision
+      .             setprecision(int __n)
+228,480 ( 0.04%)    { return { __n }; }
+      .           
+      .             template<typename _CharT, typename _Traits>
+      .               inline basic_istream<_CharT, _Traits>&
+      .               operator>>(basic_istream<_CharT, _Traits>& __is, _Setprecision __f)
+      .               {
+      .                 __is.precision(__f._M_n);
+      .                 return __is;
+      .               }
+-- line 206 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: analysis.cpp
+--------------------------------------------------------------------------------
+Ir                  
+
+-- line 7 ----------------------------------------
+         .           #include <cmath>
+         .           #include <iostream>
+         .           #include <list>
+         .           #include <vector>
+         .           
+         .           namespace Analysis {
+         .           
+         .           std::vector<double> correlation_coefficients(const std::vector<Vector>& datasets)
+        10 ( 0.00%)  {
+         7 ( 0.00%)      std::vector<double> result {};
+        52 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<double, std::allocator<double> >::vector() (1x)
+         .           
+     2,817 ( 0.00%)      for (auto sample1 { 0 }; sample1 < datasets.size() - 1; sample1++) {
+     3,328 ( 0.00%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::size() const (256x)
+   329,715 ( 0.06%)          for (auto sample2 { sample1 + 1 }; sample2 < datasets.size(); sample2++) {
+   427,635 ( 0.08%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::size() const (32,895x)
+   587,520 ( 0.11%)              auto corr { pearson(datasets[sample1], datasets[sample2]) };
+314,616,960 (56.41%)  => analysis.cpp:Analysis::pearson(Vector const&, Vector const&) (32,640x)
+   783,360 ( 0.14%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<Vector, std::allocator<Vector> >::operator[](unsigned long) (65,280x)
+   163,200 ( 0.03%)              result.push_back(corr);
+ 2,615,676 ( 0.47%)  => /usr/include/c++/13/bits/stl_vector.h:std::vector<double, std::allocator<double> >::push_back(double const&) (32,640x)
+         .                   }
+         .               }
+         .           
+         1 ( 0.00%)      return result;
+         7 ( 0.00%)  }
+         .           
+         .           double pearson(const Vector& vec1, const Vector& vec2)
+   293,760 ( 0.05%)  {
+   130,560 ( 0.02%)      unsigned n = vec1.get_size();
+   261,120 ( 0.05%)  => /home/zxn1225/Desktop/performance_opti/pearson_op2/vector.cpp:Vector::get_size() const (32,640x)
+    65,280 ( 0.01%)      if (n == 0) return 0.0;
+         .               
+   130,560 ( 0.02%)      const double* x_data = vec1.get_data();
+   261,120 ( 0.05%)  => /home/zxn1225/Desktop/performance_opti/pearson_op2/vector.cpp:Vector::get_data() const (32,640x)
+   130,560 ( 0.02%)      const double* y_data = vec2.get_data();
+   261,120 ( 0.05%)  => /home/zxn1225/Desktop/performance_opti/pearson_op2/vector.cpp:Vector::get_data() const (32,640x)
+         .               
+    65,280 ( 0.01%)      double sum_x = 0.0;
+    65,280 ( 0.01%)      double sum_y = 0.0;
+    65,280 ( 0.01%)      double sum_x2 = 0.0; 
+    65,280 ( 0.01%)      double sum_y2 = 0.0; 
+    65,280 ( 0.01%)      double sum_xy = 0.0; 
+         .               
+         .               // fusion
+33,586,560 ( 6.02%)      for (unsigned i = 0; i < n; i++) {
+50,135,040 ( 8.99%)          double x = x_data[i]; 
+50,135,040 ( 8.99%)          double y = y_data[i]; 
+         .                   
+25,067,520 ( 4.49%)          sum_x += x;
+25,067,520 ( 4.49%)          sum_y += y;
+41,779,200 ( 7.49%)          sum_x2 += x * x;
+41,779,200 ( 7.49%)          sum_y2 += y * y;
+41,779,200 ( 7.49%)          sum_xy += x * y;
+         .               }
+         .               
+   228,480 ( 0.04%)      double N_double = static_cast<double>(n);
+   195,840 ( 0.04%)      double numerator = N_double * sum_xy - sum_x * sum_y;
+         .               
+         .               // Denominator 
+   293,760 ( 0.05%)      double term_x = N_double * sum_x2 - sum_x * sum_x;
+   293,760 ( 0.05%)      double term_y = N_double * sum_y2 - sum_y * sum_y;
+         .               
+   195,840 ( 0.04%)      if (term_x <= 0.0 || term_y <= 0.0) {
+         .                   return 0.0;
+         .               }
+         .               
+   228,480 ( 0.04%)      double denominator = std::sqrt(term_x * term_y);
+   326,400 ( 0.06%)  => ???:0x000000000010a420 (32,640x)
+         .               
+    97,920 ( 0.02%)      double r = numerator / denominator;
+         .           
+   489,600 ( 0.09%)      return std::max(std::min(r, 1.0), -1.0);
+   456,960 ( 0.08%)  => /usr/include/c++/13/bits/stl_algobase.h:double const& std::min<double>(double const&, double const&) (32,640x)
+   456,960 ( 0.08%)  => /usr/include/c++/13/bits/stl_algobase.h:double const& std::max<double>(double const&, double const&) (32,640x)
+   163,200 ( 0.03%)  }
+         .           };
+
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  ./elf/../sysdeps/generic/dl-new-hash.h
+  ./elf/./elf/dl-lookup.c
+  ./elf/./elf/dl-reloc.c
+  ./io/../sysdeps/unix/sysv/linux/write.c
+  ./libio/../include/printf_buffer.h
+  ./libio/./libio/fileno.c
+  ./libio/./libio/vsnprintf.c
+  ./locale/./locale/uselocale.c
+  ./malloc/./malloc/arena.c
+  ./malloc/./malloc/malloc.c
+  ./math/./math/w_sqrt_compat.c
+  ./nptl/./nptl/alloca_cutoff.c
+  ./nptl/./nptl/pthread_once.c
+  ./stdio-common/../include/printf_buffer.h
+  ./stdio-common/../sysdeps/generic/get-rounding-mode.h
+  ./stdio-common/../sysdeps/pthread/allocalim.h
+  ./stdio-common/./stdio-common/Xprintf_buffer_done.c
+  ./stdio-common/./stdio-common/Xprintf_buffer_write.c
+  ./stdio-common/./stdio-common/printf-parse.h
+  ./stdio-common/./stdio-common/printf_fp.c
+  ./stdio-common/./stdio-common/vfprintf-internal.c
+  ./stdlib/../include/rounding-mode.h
+  ./stdlib/../string/bits/string_fortified.h
+  ./stdlib/../sysdeps/generic/get-rounding-mode.h
+  ./stdlib/../sysdeps/ieee754/dbl-64/dbl2mpn.c
+  ./stdlib/../sysdeps/ieee754/dbl-64/mpn2dbl.c
+  ./stdlib/../sysdeps/x86_64/lshift.S
+  ./stdlib/../sysdeps/x86_64/mul_1.S
+  ./stdlib/../sysdeps/x86_64/rshift.S
+  ./stdlib/./stdlib/mul.c
+  ./stdlib/./stdlib/strtod_l.c
+  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S
+  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+  ./string/../sysdeps/x86_64/multiarch/strchr-avx2.S
+  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S
+
+--------------------------------------------------------------------------------
+Ir                   
+--------------------------------------------------------------------------------
+329,365,746 (59.06%)  events annotated
+

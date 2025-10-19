@@ -1,0 +1,6 @@
+==49026== Massif, a heap profiler
+==49026== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==49026== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==49026== Command: ./pearson data/128.data output/output_128.txt
+==49026== 
+==49026== 

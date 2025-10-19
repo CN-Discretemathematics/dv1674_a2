@@ -1,0 +1,11 @@
+==49191== Callgrind, a call-graph generating cache profiler
+==49191== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==49191== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==49191== Command: ./pearson data/256.data output/output_256.txt
+==49191== 
+==49191== For interactive control, run 'callgrind_control -h'.
+==49191== 
+==49191== Events    : Ir
+==49191== Collected : 557684416
+==49191== 
+==49191== I   refs:      557,684,416

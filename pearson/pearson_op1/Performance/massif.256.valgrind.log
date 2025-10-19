@@ -1,0 +1,6 @@
+==43327== Massif, a heap profiler
+==43327== Copyright (C) 2003-2017, and GNU GPL'd, by Nicholas Nethercote
+==43327== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==43327== Command: ./pearson data/256.data output/output_256.txt
+==43327== 
+==43327== 

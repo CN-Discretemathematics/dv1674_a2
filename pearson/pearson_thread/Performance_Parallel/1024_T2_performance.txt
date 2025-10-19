@@ -1,0 +1,19 @@
+========== Measuring size=1024, T=2 ==========
+Data: data/1024.data -> output/output_1024_T2.txt
+Threads: 2
+
+  parsed run 1: Wall=2.811196 User=2.900000 Sys=0.980000 AvgCPU=164.615385% MaxCPU=195.000000% MaxRSS=20092KB
+  parsed run 2: Wall=2.952136 User=2.610000 Sys=1.430000 AvgCPU=165.333333% MaxCPU=194.000000% MaxRSS=20128KB
+  parsed run 3: Wall=2.890361 User=2.960000 Sys=0.920000 AvgCPU=169.400000% MaxCPU=200.000000% MaxRSS=20124KB
+  parsed run 4: Wall=2.936922 User=3.090000 Sys=0.860000 AvgCPU=161.428571% MaxCPU=198.000000% MaxRSS=20092KB
+  parsed run 5: Wall=2.877342 User=2.900000 Sys=1.080000 AvgCPU=166.074074% MaxCPU=196.000000% MaxRSS=20092KB
+===== Final summary for size=1024, T=2 =====
+Execution time (avg over 5 native runs):
+  Avg_Wall_seconds: 2.893591
+  Avg_User_seconds: 2.892000
+  Avg_Sys_seconds: 1.054000
+Memory (sampled):
+  Avg_MaxRSS_kB (sampled): 20106
+CPU utilization (sampling):
+  Avg_CPU_percent_from_sampling: 165.370273%
+  Max_CPU_percent_observed_from_sampling: 200%
