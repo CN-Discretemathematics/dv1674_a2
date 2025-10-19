@@ -68,13 +68,12 @@ namespace Filter
                 scratch.b(x, y) = b / n;
             }
         }
-
+        
         for (auto x{0}; x < dst.get_x_size(); x++)
         {
             for (auto y{0}; y < dst.get_y_size(); y++)
             {
-                double w[Gauss::max_radius]{};
-                Gauss::get_weights(radius, w);
+               
 
                 auto r{w[0] * scratch.r(x, y)}, g{w[0] * scratch.g(x, y)}, b{w[0] * scratch.b(x, y)}, n{w[0]};
 
